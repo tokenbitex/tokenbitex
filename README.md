@@ -13,6 +13,9 @@ It is designed for fast, low-cost transactions and easy integration with decentr
 - **Contract Address:**  
   `0x4296dD83e49d01BB801172d8e938FafE6dcF86A0`
 
+- **Token Logo (SVG 32x32):**  
+  ![BITEX Logo](https://raw.githubusercontent.com/tokenbitex/tokenbitex/main/bitex32.svg)
+
 ---
 
 ## 🔹 Use Cases
@@ -20,20 +23,17 @@ It is designed for fast, low-cost transactions and easy integration with decentr
 - Digital payments  
 - Trading on DEX and CEX platforms  
 - Integration with payment systems  
-- Utility token for future ecosystem services  
+- Utility token for ecosystem services  
 
 ---
 
 ## 🔹 Official Links
 
 - **Official Website:**  
-  https://tokenbitex.github.io/tokenbitex/
-
-- **Token Logo (SVG 32x32):**  
-  https://raw.githubusercontent.com/tokenbitex/tokenbitex/main/bitex.svg
+  [https://tokenbitex.github.io/tokenbitex/](https://tokenbitex.github.io/tokenbitex/)
 
 - **PolygonScan:**  
-  https://polygonscan.com/token/0x4296dD83e49d01BB801172d8e938FafE6dcF86A0
+  [https://polygonscan.com/token/0x4296dD83e49d01BB801172d8e938FafE6dcF86A0](https://polygonscan.com/token/0x4296dD83e49d01BB801172d8e938FafE6dcF86A0)
 
 ---
 
