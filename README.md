@@ -1,7 +1,8 @@
 # TokenBitex (BIT)
 
-TokenBitex (BIT) is a utility token deployed on the Polygon (PoS) network.  
-It is designed for fast, low-cost transactions and easy integration with decentralized and centralized platforms.
+TokenBitex (BIT) is a decentralized utility token deployed on the Polygon (PoS) network.
+It is designed for fast, secure, and low-cost transactions, with seamless integration
+across decentralized and centralized platforms.
 
 ---
 
@@ -13,40 +14,50 @@ It is designed for fast, low-cost transactions and easy integration with decentr
 - **Contract Address:**  
   `0x4296dD83e49d01BB801172d8e938FafE6dcF86A0`
 
-- **Token Logo (SVG 32x32):**  
-  ![BITEX Logo](https://raw.githubusercontent.com/tokenbitex/tokenbitex/main/bitex32.svg)
+- **Token Icon (SVG 32×32):**  
+  ![TokenBitex Logo](https://raw.githubusercontent.com/tokenbitex/tokenbitex/main/bitex32.svg)
+
+---
+
+## 🔹 Overview
+
+TokenBitex (BIT) leverages the scalability and efficiency of the Polygon network to enable
+cost-effective token transfers. It is suitable for everyday digital payments, trading,
+and integration into blockchain-based services and applications.
 
 ---
 
 ## 🔹 Use Cases
 
-- Digital payments  
-- Trading on DEX and CEX platforms  
-- Integration with payment systems  
-- Utility token for ecosystem services  
+- Digital and peer-to-peer payments  
+- Trading on decentralized (DEX) and centralized (CEX) exchanges  
+- Integration with payment gateways and platforms  
+- Utility token for ecosystem services and applications  
 
 ---
 
 ## 🔹 Official Links
 
 - **Official Website:**  
-  [https://tokenbitex.github.io/tokenbitex/](https://tokenbitex.github.io/tokenbitex/)
+  https://tokenbitex.github.io/tokenbitex/
 
-- **PolygonScan:**  
-  [https://polygonscan.com/token/0x4296dD83e49d01BB801172d8e938FafE6dcF86A0](https://polygonscan.com/token/0x4296dD83e49d01BB801172d8e938FafE6dcF86A0)
+- **PolygonScan Token Page:**  
+  https://polygonscan.com/token/0x4296dD83e49d01BB801172d8e938FafE6dcF86A0
 
 ---
 
 ## 🔹 Project Status
 
 This project is actively maintained.  
-Token metadata and branding assets are publicly available for transparency and verification.
+Token metadata, smart contract information, and branding assets are publicly available
+to ensure transparency and easy verification.
 
 ---
 
-## 🔹 Contact & Verification
+## 🔹 Verification & Contact
 
-For verification or inquiries related to TokenBitex, please refer to the official website or the PolygonScan token page.
+For verification requests, token information, or general inquiries, please refer to
+the official website or the PolygonScan token page listed above.
 
 ---
 
