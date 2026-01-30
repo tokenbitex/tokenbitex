@@ -8,48 +8,38 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <style>
     /* سبک روشن داخلی */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: "Segoe UI", Arial, sans-serif;
       line-height: 1.7;
       background: #ffffff;
       color: #222222;
+      padding: 0;
     }
 
     header {
-      padding: 50px 20px;
       text-align: center;
-      background: #f5f5f5;
-      border-bottom: 1px solid #ccc;
+      padding: 40px 20px;
+      background: #f3f4f6;
+      border-bottom: 1px solid #e5e7eb;
     }
 
-    header h1 {
-      font-size: 2.8rem;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 1.1rem;
-      color: #555555;
-    }
+    header h1 { font-size: 2.4rem; margin-bottom: 10px; }
+    header p { color: #4b5563; font-size: 1.1rem; }
 
     nav {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       gap: 20px;
-      padding: 15px 10px;
-      background: #fafafa;
-      border-bottom: 1px solid #ccc;
+      padding: 15px;
+      background: #f9fafb;
+      border-bottom: 1px solid #e5e7eb;
     }
 
     nav a {
-      color: #1a73e8;
+      color: #1d4ed8;
       text-decoration: none;
       font-weight: 600;
       padding: 5px 10px;
@@ -58,79 +48,44 @@
     }
 
     nav a:hover {
-      color: #155ab6;
+      color: #2563eb;
       background: #e2e8f0;
     }
 
-    main {
-      max-width: 1000px;
-      margin: auto;
-      padding: 40px 20px;
-    }
+    main { max-width: 1000px; margin: auto; padding: 40px 20px; }
 
     section {
       background: #ffffff;
-      border: 1px solid #ddd;
+      border: 1px solid #e5e7eb;
       border-radius: 12px;
-      padding: 25px 20px;
+      padding: 25px;
       margin-bottom: 30px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
 
-    h1, h2, h3 {
-      color: #111111;
-      margin-bottom: 15px;
-    }
+    h2 { color: #111827; margin-bottom: 15px; }
+    a { color: #1d4ed8; }
+    a:hover { text-decoration: underline; }
 
-    ul {
-      margin-left: 20px;
-      margin-top: 10px;
-    }
+    ul { margin-left: 20px; margin-top: 10px; }
+    ul li { margin-bottom: 8px; }
 
-    ul li {
-      margin-bottom: 8px;
-    }
-
-    a {
-      color: #1a73e8;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    img {
-      display: block;
-      margin: 10px 0;
-      border-radius: 8px;
-      max-width: 100%;
-      height: auto;
-    }
-
-    section#logo img {
-      margin-bottom: 15px;
-    }
+    img { display: block; max-width: 100%; height: auto; margin: 10px 0; border-radius: 8px; }
 
     footer {
       text-align: center;
       padding: 20px;
       font-size: 14px;
-      color: #555555;
-      border-top: 1px solid #ccc;
+      color: #6b7280;
+      border-top: 1px solid #e5e7eb;
     }
 
+    section#logo img { max-width: 150px; height: auto; margin-bottom: 15px; }
+
     @media (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
-      }
-
-      nav {
-        gap: 12px;
-      }
-
-      main {
-        padding: 25px 15px;
-      }
+      header h1 { font-size: 1.8rem; }
+      nav { gap: 12px; }
+      main { padding: 25px 15px; }
     }
   </style>
 </head>
@@ -187,7 +142,7 @@
     </p>
     <ul>
       <li>
-        LinkedIn: 
+        LinkedIn:
         <a href="https://www.linkedin.com/in/token-bitex-832a5b3a1" target="_blank">
           https://www.linkedin.com/in/token-bitex-832a5b3a1
         </a>
@@ -208,9 +163,9 @@
   <section id="logo">
     <h2>Token Logo</h2>
     <p>SVG 32×32:</p>
-    <img src="assets/img/Bitex32.svg" alt="BITEX Logo" style="width:32px; height:32px;">
+    <img src="assets/img/bitex32.svg" alt="BITEX Logo" width="32" height="32">
     <p>PNG 256×256:</p>
-    <img src="assets/img/Bitex256.png" alt="BITEX Logo" style="width:128px; height:auto;">
+    <img src="assets/img/bitex256.png" alt="BITEX Logo" width="128">
   </section>
 </main>
 
