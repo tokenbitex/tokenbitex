@@ -1,47 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  margin: 30px;
-  background: #ffffff;
-  color: #222;
-  line-height: 1.6;
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: #e5e7eb;
+  line-height: 1.7;
 }
 
 header {
+  padding: 40px 20px;
   text-align: center;
-  margin-bottom: 20px;
+  background: radial-gradient(circle at top, #1e293b, #020617);
+  border-bottom: 1px solid #1f2937;
+}
+
+header h1 {
+  font-size: 2.4rem;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+header p {
+  color: #9ca3af;
 }
 
 nav {
-  text-align: center;
-  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 15px;
+  background: rgba(255,255,255,0.03);
+  border-bottom: 1px solid #1f2937;
 }
 
 nav a {
-  margin: 0 12px;
-  color: #1a73e8;
+  color: #60a5fa;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
+  transition: 0.3s;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  color: #93c5fd;
+}
+
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px;
 }
 
 section {
-  border: 1px solid #ddd;
-  padding: 15px;
-  border-radius: 8px;
-  margin-bottom: 25px;
-  max-width: 900px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid #1f2937;
+  border-radius: 14px;
+  padding: 25px;
+  margin-bottom: 30px;
 }
 
-h1, h2 {
-  color: #111;
+h1, h2, h3 {
+  color: #f9fafb;
 }
 
 footer {
   text-align: center;
-  margin-top: 20px;
+  padding: 20px;
   font-size: 14px;
-  color: #666;
+  color: #9ca3af;
+  border-top: 1px solid #1f2937;
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  nav {
+    gap: 12px;
+  }
+
+  main {
+    padding: 25px 15px;
+  }
 }
