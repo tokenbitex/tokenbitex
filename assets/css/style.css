@@ -1,53 +1,74 @@
+/* ===================================
+   Global Reset
+   =================================== */
 * {
   box-sizing: border-box;
-}
-
-body {
   margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: linear-gradient(135deg, #0f172a, #020617);
-  color: #e5e7eb;
-  line-height: 1.7;
+  padding: 0;
 }
 
+/* ===================================
+   Body & Typography
+   =================================== */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.7;
+  background: #ffffff; /* پس‌زمینه سفید */
+  color: #222222;      /* متن تیره */
+  padding: 0;
+}
+
+/* ===================================
+   Header
+   =================================== */
 header {
-  padding: 40px 20px;
+  padding: 50px 20px;
   text-align: center;
-  background: radial-gradient(circle at top, #1e293b, #020617);
-  border-bottom: 1px solid #1f2937;
+  background: #f5f5f5; /* هدر روشن */
+  border-bottom: 1px solid #ccc;
 }
 
 header h1 {
-  font-size: 2.4rem;
-  margin: 0;
+  font-size: 2.8rem;
   letter-spacing: 1px;
+  margin-bottom: 10px;
 }
 
 header p {
-  color: #9ca3af;
+  font-size: 1.1rem;
+  color: #555555;
 }
 
+/* ===================================
+   Navigation
+   =================================== */
 nav {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
-  padding: 15px;
-  background: rgba(255,255,255,0.03);
-  border-bottom: 1px solid #1f2937;
+  padding: 15px 10px;
+  background: #fafafa; /* روشن */
+  border-bottom: 1px solid #ccc;
 }
 
 nav a {
-  color: #60a5fa;
+  color: #1a73e8;
   text-decoration: none;
   font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 6px;
   transition: 0.3s;
 }
 
 nav a:hover {
-  color: #93c5fd;
+  color: #155ab6;
+  background: #e2e8f0;
 }
 
+/* ===================================
+   Main & Sections
+   =================================== */
 main {
   max-width: 1000px;
   margin: auto;
@@ -55,35 +76,63 @@ main {
 }
 
 section {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid #1f2937;
-  border-radius: 14px;
-  padding: 25px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 25px 20px;
   margin-bottom: 30px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
 h1, h2, h3 {
-  color: #f9fafb;
+  color: #111111;
+  margin-bottom: 15px;
 }
 
+ul {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+/* ===================================
+   Images
+   =================================== */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 10px 0;
+  border-radius: 8px;
+}
+
+/* ===================================
+   Footer
+   =================================== */
 footer {
   text-align: center;
   padding: 20px;
   font-size: 14px;
-  color: #9ca3af;
-  border-top: 1px solid #1f2937;
+  color: #555555;
+  border-top: 1px solid #ccc;
 }
 
+/* ===================================
+   Responsive
+   =================================== */
 @media (max-width: 768px) {
   header h1 {
-    font-size: 1.8rem;
-  }
-
-  nav {
-    gap: 12px;
+    font-size: 2rem;
   }
 
   main {
     padding: 25px 15px;
+  }
+
+  nav {
+    gap: 12px;
   }
 }
