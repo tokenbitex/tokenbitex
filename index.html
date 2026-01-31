@@ -1,188 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>BITEX (BIT) — Utility Token on Polygon</title>
-  <meta name="description" content="BITEX (BIT) is an ERC-20 utility token on Polygon for payments, DeFi and trading.">
-  <link rel="stylesheet" href="assets/css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BITEX (BIT) — Polygon Utility Token</title>
+<meta name="description" content="BITEX (BIT) is a decentralized ERC-20 utility token on Polygon for payments, DeFi and trading.">
 
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    body {
-      font-family: "Segoe UI", Arial, sans-serif;
-      background: #ffffff;
-      color: #222;
-      line-height: 1.7;
-    }
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+font-family:'Inter',sans-serif;
+background:radial-gradient(circle at top,#0f172a,#020617);
+color:#e5e7eb;
+line-height:1.7;
+overflow-x:hidden;
+}
 
-    header {
-      text-align: center;
-      padding: 40px 20px;
-      background: #f3f4f6;
-      border-bottom: 1px solid #e5e7eb;
-    }
+header{
+padding:80px 20px 60px;
+text-align:center;
+background:linear-gradient(145deg,#020617,#0f172a,#020617);
+border-bottom:1px solid rgba(255,255,255,.06)
+}
 
-    header h1 { font-size: 2.4rem; margin-bottom: 10px; }
-    header p { color: #555; }
+header h1{
+font-size:3.2rem;
+letter-spacing:2px;
+margin-bottom:12px;
+color:#60a5fa
+}
 
-    nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 15px;
-      padding: 15px;
-      background: #f9fafb;
-      border-bottom: 1px solid #e5e7eb;
-    }
+header p{
+color:#9ca3af;
+font-size:1.1rem
+}
 
-    nav a {
-      color: #1d4ed8;
-      text-decoration: none;
-      font-weight: 600;
-      padding: 6px 12px;
-      border-radius: 6px;
-      transition: 0.3s;
-    }
+nav{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:24px;
+padding:18px;
+background:rgba(255,255,255,.02);
+backdrop-filter:blur(12px);
+border-bottom:1px solid rgba(255,255,255,.06)
+}
 
-    nav a:hover {
-      background: #e5edff;
-    }
+nav a{
+color:#93c5fd;
+text-decoration:none;
+font-weight:600;
+letter-spacing:.5px;
+transition:.3s
+}
+nav a:hover{color:#60a5fa}
 
-    main {
-      max-width: 1000px;
-      margin: auto;
-      padding: 40px 20px;
-    }
+main{
+max-width:1200px;
+margin:auto;
+padding:70px 20px
+}
 
-    section {
-      background: #fff;
-      border: 1px solid #e5e7eb;
-      border-radius: 12px;
-      padding: 25px;
-      margin-bottom: 30px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    }
+section{
+background:rgba(255,255,255,.03);
+border:1px solid rgba(255,255,255,.08);
+border-radius:18px;
+padding:35px;
+margin-bottom:40px;
+box-shadow:0 15px 40px rgba(0,0,0,.4)
+}
 
-    h2 { margin-bottom: 15px; }
+h2{
+font-size:1.9rem;
+margin-bottom:18px;
+color:#93c5fd
+}
 
-    ul { margin-left: 20px; }
-    ul li { margin-bottom: 8px; }
+ul{padding-left:20px}
+ul li{margin-bottom:10px}
 
-    .contract {
-      word-break: break-all;
-      overflow-wrap: anywhere;
-      font-size: 14px;
-    }
+.token-box{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px
+}
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      color: #666;
-      border-top: 1px solid #e5e7eb;
-    }
+.card{
+background:rgba(255,255,255,.04);
+padding:18px 20px;
+border-radius:14px;
+border:1px solid rgba(255,255,255,.08)
+}
 
-    section#logo img {
-      max-width: 140px;
-      margin: 10px 0;
-    }
+.contract{
+word-break:break-all;
+font-family:monospace;
+color:#60a5fa
+}
 
-    @media (max-width: 768px) {
-      header h1 { font-size: 1.8rem; }
-      main { padding: 25px 15px; }
-    }
-  </style>
+.logo-box{
+display:flex;
+flex-wrap:wrap;
+gap:40px;
+align-items:center;
+justify-content:center;
+margin-top:20px
+}
+
+.logo-box img{
+background:#fff;
+padding:10px;
+border-radius:14px;
+box-shadow:0 0 25px rgba(96,165,250,.4)
+}
+
+footer{
+text-align:center;
+padding:30px 20px;
+color:#9ca3af;
+border-top:1px solid rgba(255,255,255,.08)
+}
+
+@media(max-width:768px){
+header h1{font-size:2.2rem}
+main{padding:50px 15px}
+section{padding:25px}
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <h1>BITEX (BIT)</h1>
-  <p>Utility Token on Polygon Network</p>
+<h1>BITEX (BIT)</h1>
+<p>Next-Generation Utility Token on Polygon Network</p>
 </header>
 
 <nav>
-  <a href="#about">About</a>
-  <a href="#tokenomics">Tokenomics</a>
-  <a href="#team">Team</a>
-  <a href="#contact">Contact</a>
-  <a href="assets/docs/Whitepaper.pdf" target="_blank">Whitepaper</a>
+<a href="#about">About</a>
+<a href="#tokenomics">Tokenomics</a>
+<a href="#team">Team</a>
+<a href="#contact">Contact</a>
+<a href="assets/docs/Whitepaper.pdf" target="_blank">Whitepaper</a>
 </nav>
 
 <main>
 
-  <section id="about">
-    <h2>About BITEX</h2>
-    <p>
-      BITEX is a blockchain-based project providing a practical utility token
-      for payments, DeFi services, and digital asset transactions.
-      Built on the Polygon network for high speed and low fees.
-    </p>
-  </section>
+<section id="about">
+<h2>About BITEX</h2>
+<p>
+BITEX (BIT) is a decentralized ERC-20 utility token deployed on the Polygon PoS blockchain. 
+It is designed to enable fast, low-cost, and secure digital payments, decentralized finance (DeFi) 
+interactions, and next-generation blockchain applications.
+</p>
+</section>
 
-  <section id="tokenomics">
-    <h2>Tokenomics</h2>
-    <ul>
-      <li><strong>Name:</strong> BITEX</li>
-      <li><strong>Symbol:</strong> BIT</li>
-      <li><strong>Network:</strong> Polygon PoS</li>
-      <li><strong>Standard:</strong> ERC-20</li>
-      <li><strong>Contract:</strong><br>
-        <a class="contract"
-           href="https://polygonscan.com/token/0x4296dD83e49d01BB801172d8e938FafE6dcF86A0"
-           target="_blank">
-          0x4296dD83e49d01BB801172d8e938FafE6dcF86A0
-        </a>
-      </li>
-      <li><strong>Primary Use:</strong> Payments, DeFi, Trading</li>
-    </ul>
-  </section>
+<section id="tokenomics">
+<h2>Tokenomics</h2>
 
-  <section id="team">
-    <h2>Project Team</h2>
-    <p>
-      The BITEX project is developed and maintained by blockchain developers and crypto enthusiasts.
-    </p>
-    <ul>
-      <li>
-        LinkedIn:
-        <a href="https://www.linkedin.com/in/token-bitex-832a5b3a1" target="_blank">
-          https://www.linkedin.com/in/token-bitex-832a5b3a1
-        </a>
-      </li>
-    </ul>
-  </section>
+<div class="token-box">
+<div class="card"><strong>Name:</strong><br> BITEX</div>
+<div class="card"><strong>Symbol:</strong><br> BIT</div>
+<div class="card"><strong>Network:</strong><br> Polygon PoS</div>
+<div class="card"><strong>Standard:</strong><br> ERC-20</div>
+<div class="card"><strong>Primary Use:</strong><br> Payments • DeFi • Trading</div>
+</div>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:contact@tokenbitex.org">contact@tokenbitex.org</a></p>
-    <p>Website: <a href="https://tokenbitex.org" target="_blank">https://tokenbitex.org</a></p>
-    <p>Telegram: <a href="https://t.me/TokenBitexOfficial" target="_blank">https://t.me/TokenBitexOfficial</a></p>
-  </section>
+<br>
 
-  <section id="logo">
-    <h2>Token Logo</h2>
-    <p>SVG 32×32:</p>
-    <img src="assets/img/bitex32.svg" alt="BITEX Logo 32">
+<div class="card">
+<strong>Contract Address:</strong>
+<p class="contract">
+0x4296dD83e49d01BB801172d8e938FafE6dcF86A0
+</p>
+<a href="https://polygonscan.com/token/0x4296dD83e49d01BB801172d8e938FafE6dcF86A0" target="_blank">View on PolygonScan →</a>
+</div>
 
-    <p>PNG 256×256:</p>
-    <img src="assets/img/bitex256.png" alt="BITEX Logo 256">
-  </section>
+</section>
+
+<section id="team">
+<h2>Project Team</h2>
+<p>Developed and maintained by blockchain engineers and crypto professionals.</p>
+
+<ul>
+<li>LinkedIn: 
+<a href="https://www.linkedin.com/in/token-bitex-832a5b3a1" target="_blank">
+token-bitex
+</a>
+</li>
+</ul>
+</section>
+
+<section id="contact">
+<h2>Contact & Community</h2>
+<p>Email: <a href="mailto:contact@tokenbitex.org">contact@tokenbitex.org</a></p>
+<p>Website: <a href="https://tokenbitex.org">https://tokenbitex.org</a></p>
+<p>Telegram: <a href="https://t.me/TokenBitexOfficial" target="_blank">TokenBitexOfficial</a></p>
+</section>
+
+<section id="logo">
+<h2>Token Logo</h2>
+<div class="logo-box">
+<div>
+<p>SVG 32×32</p>
+<img src="assets/img/bitex32.svg" width="60">
+</div>
+
+<div>
+<p>PNG 256×256</p>
+<img src="assets/img/bitex256.png" width="140">
+</div>
+</div>
+</section>
 
 </main>
 
 <footer>
-  <p>Contract Address:</p>
-  <p>
-    <a class="contract"
-       href="https://polygonscan.com/token/0x4296dD83e49d01BB801172d8e938FafE6dcF86A0"
-       target="_blank">
-      0x4296dD83e49d01BB801172d8e938FafE6dcF86A0
-    </a>
-  </p>
-  <p>© 2026 BITEX — All Rights Reserved</p>
+<p>© 2026 BITEX — All Rights Reserved</p>
 </footer>
 
 </body>
