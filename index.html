@@ -6,16 +6,15 @@
   <title>BITEX (BIT) — Utility Token on Polygon</title>
   <meta name="description" content="BITEX (BIT) is an ERC-20 utility token on Polygon for payments, DeFi and trading.">
   <link rel="stylesheet" href="assets/css/style.css">
+
   <style>
-    /* سبک روشن داخلی */
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: "Segoe UI", Arial, sans-serif;
-      line-height: 1.7;
       background: #ffffff;
-      color: #222222;
-      padding: 0;
+      color: #222;
+      line-height: 1.7;
     }
 
     header {
@@ -26,13 +25,13 @@
     }
 
     header h1 { font-size: 2.4rem; margin-bottom: 10px; }
-    header p { color: #4b5563; font-size: 1.1rem; }
+    header p { color: #555; }
 
     nav {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 20px;
+      gap: 15px;
       padding: 15px;
       background: #f9fafb;
       border-bottom: 1px solid #e5e7eb;
@@ -42,20 +41,23 @@
       color: #1d4ed8;
       text-decoration: none;
       font-weight: 600;
-      padding: 5px 10px;
+      padding: 6px 12px;
       border-radius: 6px;
       transition: 0.3s;
     }
 
     nav a:hover {
-      color: #2563eb;
-      background: #e2e8f0;
+      background: #e5edff;
     }
 
-    main { max-width: 1000px; margin: auto; padding: 40px 20px; }
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
 
     section {
-      background: #ffffff;
+      background: #fff;
       border: 1px solid #e5e7eb;
       border-radius: 12px;
       padding: 25px;
@@ -63,32 +65,37 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
 
-    h2 { color: #111827; margin-bottom: 15px; }
-    a { color: #1d4ed8; }
-    a:hover { text-decoration: underline; }
+    h2 { margin-bottom: 15px; }
 
-    ul { margin-left: 20px; margin-top: 10px; }
+    ul { margin-left: 20px; }
     ul li { margin-bottom: 8px; }
 
-    img { display: block; max-width: 100%; height: auto; margin: 10px 0; border-radius: 8px; }
+    .contract {
+      word-break: break-all;
+      overflow-wrap: anywhere;
+      font-size: 14px;
+    }
 
     footer {
       text-align: center;
       padding: 20px;
       font-size: 14px;
-      color: #6b7280;
+      color: #666;
       border-top: 1px solid #e5e7eb;
     }
 
-    section#logo img { max-width: 150px; height: auto; margin-bottom: 15px; }
+    section#logo img {
+      max-width: 140px;
+      margin: 10px 0;
+    }
 
     @media (max-width: 768px) {
       header h1 { font-size: 1.8rem; }
-      nav { gap: 12px; }
       main { padding: 25px 15px; }
     }
   </style>
 </head>
+
 <body>
 
 <header>
@@ -105,18 +112,16 @@
 </nav>
 
 <main>
-  <!-- About Section -->
+
   <section id="about">
     <h2>About BITEX</h2>
     <p>
       BITEX is a blockchain-based project providing a practical utility token
       for payments, DeFi services, and digital asset transactions.
       Built on the Polygon network for high speed and low fees.
-      The project is community-driven and aims to expand real-world crypto payment adoption.
     </p>
   </section>
 
-  <!-- Tokenomics Section -->
   <section id="tokenomics">
     <h2>Tokenomics</h2>
     <ul>
@@ -124,8 +129,10 @@
       <li><strong>Symbol:</strong> BIT</li>
       <li><strong>Network:</strong> Polygon PoS</li>
       <li><strong>Standard:</strong> ERC-20</li>
-      <li><strong>Contract:</strong>
-        <a href="https://polygonscan.com/token/0x4296dD83e49d01BB801172d8e938FafE6dcF86A0" target="_blank">
+      <li><strong>Contract:</strong><br>
+        <a class="contract"
+           href="https://polygonscan.com/token/0x4296dD83e49d01BB801172d8e938FafE6dcF86A0"
+           target="_blank">
           0x4296dD83e49d01BB801172d8e938FafE6dcF86A0
         </a>
       </li>
@@ -133,12 +140,10 @@
     </ul>
   </section>
 
-  <!-- Team Section -->
   <section id="team">
     <h2>Project Team</h2>
     <p>
       The BITEX project is developed and maintained by blockchain developers and crypto enthusiasts.
-      Professional team profile:
     </p>
     <ul>
       <li>
@@ -150,28 +155,30 @@
     </ul>
   </section>
 
-  <!-- Contact Section -->
   <section id="contact">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:contact@tokenbitex.org">contact@tokenbitex.org</a></p>
     <p>Website: <a href="https://tokenbitex.org" target="_blank">https://tokenbitex.org</a></p>
     <p>Telegram: <a href="https://t.me/TokenBitexOfficial" target="_blank">https://t.me/TokenBitexOfficial</a></p>
-    <p>Whitepaper: <a href="assets/docs/Whitepaper.pdf" target="_blank">Download PDF</a></p>
   </section>
 
-  <!-- Logo Section -->
   <section id="logo">
     <h2>Token Logo</h2>
     <p>SVG 32×32:</p>
-    <img src="assets/img/bitex32.svg" alt="BITEX Logo" width="32" height="32">
+    <img src="assets/img/bitex32.svg" alt="BITEX Logo 32">
+
     <p>PNG 256×256:</p>
-    <img src="assets/img/bitex256.png" alt="BITEX Logo" width="128">
+    <img src="assets/img/bitex256.png" alt="BITEX Logo 256">
   </section>
+
 </main>
 
 <footer>
-  <p>Contract Address:
-    <a href="https://polygonscan.com/token/0x4296dD83e49d01BB801172d8e938FafE6dcF86A0" target="_blank">
+  <p>Contract Address:</p>
+  <p>
+    <a class="contract"
+       href="https://polygonscan.com/token/0x4296dD83e49d01BB801172d8e938FafE6dcF86A0"
+       target="_blank">
       0x4296dD83e49d01BB801172d8e938FafE6dcF86A0
     </a>
   </p>
