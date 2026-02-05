@@ -9,8 +9,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
-/* Reset & base */
-*{box-sizing:border-box;margin:0;padding:0}
+*{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:Segoe UI,Arial,sans-serif;background:linear-gradient(180deg,#f8fafc,#ffffff);color:#0f172a;line-height:1.7;}
 a{text-decoration:none;color:#2563eb;transition:.3s;}
 a:hover{color:#1d4ed8;}
@@ -25,10 +24,10 @@ header h1{font-size:3rem;}
 header span{color:#2563eb;}
 header p{margin-top:10px;font-size:1.1rem;color:#475569;}
 
-/* Nav */
-.navbar{position:fixed;top:20px;left:20px;z-index:100;}
+/* Hamburger Menu */
+.navbar{position:absolute;top:20px;left:20px;z-index:100;}
 .hamburger{font-size:2rem;cursor:pointer;color:#2563eb;}
-.nav-menu{position:fixed;top:0;left:-300px;width:280px;height:100%;background:#ffffff;box-shadow:2px 0 10px rgba(0,0,0,.1);transition:.3s;padding:30px;}
+.nav-menu{position:fixed;top:0;left:-300px;width:280px;height:100%;background:#ffffff;box-shadow:2px 0 10px rgba(0,0,0,.1);transition:.3s;padding:30px;z-index:200;}
 .nav-menu.active{left:0;}
 .nav-menu a{display:block;margin-bottom:20px;font-weight:600;color:#2563eb;}
 .nav-menu .close-btn{position:absolute;top:20px;right:20px;font-size:1.5rem;cursor:pointer;color:#2563eb;}
@@ -43,10 +42,10 @@ header p{margin-top:10px;font-size:1.1rem;color:#475569;}
 /* Footer */
 footer{text-align:center;padding:25px;font-size:14px;color:#64748b;border-top:1px solid #e5e7eb;}
 
-/* Social Network */
-.social-network{display:flex;justify-content:center;flex-wrap:wrap;gap:15px;margin-top:20px;}
-.social-network a{font-size:28px;color:#2563eb;}
-.social-network a:hover{color:#1d4ed8;}
+/* Social */
+.social{display:flex;justify-content:center;flex-wrap:wrap;gap:15px;margin-top:20px;}
+.social a{font-size:28px;color:#2563eb;}
+.social a:hover{color:#1d4ed8;}
 
 /* How to Buy Buttons */
 .buy-btns{display:flex;flex-wrap:wrap;gap:15px;margin-top:20px;}
@@ -63,7 +62,7 @@ section{padding:25px;}
 <body>
 
 <!-- Hamburger Menu -->
-<div class="navbar">
+<div class="navbar" id="navbar">
   <i class="fas fa-bars hamburger" onclick="openMenu()"></i>
 </div>
 
@@ -73,7 +72,7 @@ section{padding:25px;}
   <a href="#tokenomics">Tokenomics</a>
   <a href="#features">Features</a>
   <a href="#team">Team</a>
-  <a href="#social">Social Network</a>
+  <a href="#social">Social</a>
   <a href="#howtobuy">How to Buy</a>
   <a href="#about">About</a>
   <a href="#contact">Contact</a>
@@ -86,26 +85,6 @@ section{padding:25px;}
 </header>
 
 <main>
-
-<section id="about">
-<h2>About BITEX</h2>
-<p>
-BITEX (BIT) is a decentralized utility token built on Polygon PoS network, designed to provide fast, secure and low-cost transactions.
-The project focuses on DeFi integrations, blockchain payments, and community-driven financial ecosystems.
-</p>
-</section>
-
-<section id="features">
-<h2>Core Features</h2>
-<div class="grid">
-<div class="card">⚡ Fast Transactions</div>
-<div class="card">💸 Ultra Low Fees</div>
-<div class="card">🔐 Secure Smart Contract</div>
-<div class="card">🌍 Global Accessibility</div>
-<div class="card">🤝 Community Driven</div>
-<div class="card">🔗 DeFi Ready</div>
-</div>
-</section>
 
 <section id="tokenomics">
 <h2>Tokenomics</h2>
@@ -121,6 +100,18 @@ The project focuses on DeFi integrations, blockchain payments, and community-dri
 <a href="https://polygonscan.com/token/0x4296dD83e49d01BB801172d8e938FafE6dcF86A0" target="_blank">
 0x4296dD83e49d01BB801172d8e938FafE6dcF86A0
 </a>
+</div>
+</section>
+
+<section id="features">
+<h2>Core Features</h2>
+<div class="grid">
+<div class="card">⚡ Fast Transactions</div>
+<div class="card">💸 Ultra Low Fees</div>
+<div class="card">🔐 Secure Smart Contract</div>
+<div class="card">🌍 Global Accessibility</div>
+<div class="card">🤝 Community Driven</div>
+<div class="card">🔗 DeFi Ready</div>
 </div>
 </section>
 
@@ -153,8 +144,8 @@ BITEX is developed by blockchain engineers and crypto specialists focused on sec
 </section>
 
 <section id="social">
-<h2>Social Network</h2>
-<div class="social-network">
+<h2>Social</h2>
+<div class="social">
 <a href="https://github.com/tokenbitex/tokenbitex" target="_blank"><i class="fab fa-github"></i></a>
 <a href="https://t.me/TokenBitexOfficial" target="_blank"><i class="fab fa-telegram"></i></a>
 <a href="https://twitter.com/tokenbitex" target="_blank"><i class="fab fa-twitter"></i></a>
@@ -165,6 +156,14 @@ BITEX is developed by blockchain engineers and crypto specialists focused on sec
 <a href="https://discord.gg/35xnXKawk" target="_blank"><i class="fab fa-discord"></i></a>
 <a href="https://www.instagram.com/tokenbitex/" target="_blank"><i class="fab fa-instagram"></i></a>
 </div>
+</section>
+
+<section id="about">
+<h2>About BITEX</h2>
+<p>
+BITEX (BIT) is a decentralized utility token built on Polygon PoS network, designed to provide fast, secure and low-cost transactions.
+The project focuses on DeFi integrations, blockchain payments, and community-driven financial ecosystems.
+</p>
 </section>
 
 <section id="contact">
@@ -189,6 +188,13 @@ BITEX is developed by blockchain engineers and crypto specialists focused on sec
 <script>
 function openMenu(){document.getElementById('navMenu').classList.add('active');}
 function closeMenu(){document.getElementById('navMenu').classList.remove('active');}
+
+// Hide hamburger when scrolling
+window.addEventListener('scroll', function(){
+  var navbar = document.getElementById('navbar');
+  if(window.scrollY > 80){ navbar.style.display = 'none'; }
+  else{ navbar.style.display = 'block'; }
+});
 </script>
 
 </body>
