@@ -1,80 +1,109 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Social – Bitex (BIT)</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #0b0b0b;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      margin: 0;
-      padding: 20px;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Social – Bitex (BIT)</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<style>
+/* ===== Body & General ===== */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(180deg, #f8fafc, #ffffff);
+  color: #0f172a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 40px 20px;
+}
 
-    h1 {
-      color: #00d1b2;
-      margin-bottom: 30px;
-      text-align: center;
-    }
+/* ===== Header ===== */
+h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #2563eb;
+  text-align: center;
+  margin-bottom: 25px;
+}
+h1 span {
+  color: #00d1b2;
+}
+p.subtitle {
+  color: #475569;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
 
-    ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
+/* ===== Social Links Grid ===== */
+ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 900px;
+}
 
-    li {
-      display: inline-block;
-    }
+li {
+  display: flex;
+  justify-content: center;
+}
 
-    a {
-      text-decoration: none;
-      color: #fff;
-      font-size: 18px;
-      transition: 0.3s;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      background: #111;
-      padding: 10px 15px;
-      border-radius: 8px;
-    }
+a {
+  text-decoration: none;
+  color: #0f172a;
+  font-weight: 600;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 20px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #e0f2fe, #ffffff);
+  border: 1px solid #cbd5e1;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
 
-    a:hover {
-      background: #00d1b2;
-      color: #000;
-    }
+a:hover {
+  background: linear-gradient(135deg, #00d1b2, #2563eb);
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
 
-    i {
-      font-size: 22px;
-    }
-  </style>
+/* ===== Icons ===== */
+i {
+  font-size: 24px;
+}
+
+/* ===== Responsive ===== */
+@media(max-width:768px){
+  h1 { font-size: 2.2rem; }
+  ul { grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); }
+  a { font-size: 16px; padding: 12px 18px; }
+}
+</style>
 </head>
 <body>
 
-  <h1>Follow Bitex on Social Media</h1>
-  <ul>
-    <li><a href="https://github.com/tokenbitex/tokenbitex" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
-    <li><a href="https://t.me/TokenBitexOfficial" target="_blank"><i class="fab fa-telegram"></i> Telegram</a></li>
-    <li><a href="https://twitter.com/tokenbitex" target="_blank"><i class="fab fa-twitter"></i> Twitter (X)</a></li>
-    <li><a href="https://medium.com/@tokenbitex/introducing-bitex-bitex-your-erc-20-utility-token-on-polygon-pos-introduction-bitex-bitex-is-5e21fcaa5a05" target="_blank"><i class="fab fa-medium"></i> Medium</a></li>
-    <li><a href="https://www.linkedin.com/in/token-bitex-832a5b3a1" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-    <li><a href="https://bitcointalk.org/index.php?topic=5570074.new#new" target="_blank"><i class="fab fa-bitcoin"></i> Bitcointalk</a></li>
-    <li><a href="https://www.facebook.com/tokenbitex" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
-    <li><a href="https://discord.gg/35xnXKawk" target="_blank"><i class="fab fa-discord"></i> Discord</a></li>
-  </ul>
+<h1>Follow <span>Bitex</span> on Social Media</h1>
+<p class="subtitle">Stay connected with our official channels and community platforms</p>
+
+<ul>
+  <li><a href="https://github.com/tokenbitex/tokenbitex" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+  <li><a href="https://t.me/TokenBitexOfficial" target="_blank"><i class="fab fa-telegram"></i> Telegram</a></li>
+  <li><a href="https://twitter.com/tokenbitex" target="_blank"><i class="fab fa-twitter"></i> Twitter (X)</a></li>
+  <li><a href="https://medium.com/@tokenbitex/introducing-bitex-bitex-your-erc-20-utility-token-on-polygon-pos-introduction-bitex-bitex-is-5e21fcaa5a05" target="_blank"><i class="fab fa-medium"></i> Medium</a></li>
+  <li><a href="https://www.linkedin.com/in/token-bitex-832a5b3a1" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+  <li><a href="https://bitcointalk.org/index.php?topic=5570074.new#new" target="_blank"><i class="fab fa-bitcoin"></i> Bitcointalk</a></li>
+  <li><a href="https://www.facebook.com/tokenbitex" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+  <li><a href="https://discord.gg/35xnXKawk" target="_blank"><i class="fab fa-discord"></i> Discord</a></li>
+</ul>
 
 </body>
 </html>
