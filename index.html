@@ -2,169 +2,199 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BITEX (BIT) | Utility Token on Polygon</title>
 <meta name="description" content="BITEX (BIT) is a fast, low-fee utility token built on Polygon for payments, DeFi, and blockchain applications.">
-<link rel="stylesheet" href="assets/css/style.css">
+
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0;}
+*{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Segoe UI,Arial,sans-serif;background:linear-gradient(180deg,#f8fafc,#ffffff);color:#0f172a;line-height:1.7;}
 
 /* HEADER */
-header{padding:90px 20px;text-align:center;background:radial-gradient(circle at top,#e0f2fe,#ffffff);}
-header h1{font-size:3.2rem;font-weight:800;}
-header span{color:#2563eb;}
-header p{color:#475569;margin-top:10px;font-size:1.1rem;}
-header .btn{margin-top:15px;}
+header{
+padding:90px 20px;
+text-align:center;
+background:radial-gradient(circle at top,#e0f2fe,#ffffff);
+position:relative;
+}
+header h1{font-size:3.2rem;font-weight:800}
+header span{color:#2563eb}
+header p{color:#475569;margin-top:10px;font-size:1.1rem}
+header .btn{margin-top:15px}
 
-/* HAMBURGER LEFT */
-.hamburger{
-  position:absolute;
-  top:20px;
-  left:20px;
-  width:28px;
-  height:22px;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-  cursor:pointer;
-  z-index:1000;
-}
-.hamburger span{
-  display:block;
-  height:4px;
-  background-color:#0f172a;
-  border-radius:2px;
-  transition:0.3s;
-}
-.hamburger.active span:nth-child(1){
-  transform:rotate(45deg) translate(5px,5px);
-}
-.hamburger.active span:nth-child(2){opacity:0;}
-.hamburger.active span:nth-child(3){
-  transform:rotate(-45deg) translate(5px,-5px);
+/* NAV Hamburger Menu */
+.menu-toggle{
+position:absolute;
+top:20px;
+left:20px;
+font-size:28px;
+cursor:pointer;
+color:#2563eb;
+z-index:1001;
 }
 
-/* NAV LINKS */
 .nav-links{
-  list-style:none;
-  position:absolute;
-  top:60px;
-  left:20px;
-  background:#ffffff;
-  border-radius:10px;
-  padding:15px 25px;
-  box-shadow:0 6px 15px rgba(0,0,0,0.1);
-  display:none;
-  flex-direction:column;
-  gap:12px;
-  z-index:999;
+position:fixed;
+top:0;
+left:0;
+width:250px;
+height:100vh;
+background:#ffffff;
+padding:80px 20px 20px 20px;
+display:none;
+flex-direction:column;
+gap:15px;
+box-shadow:2px 0 12px rgba(0,0,0,0.1);
+z-index:1000;
+transition:0.3s;
 }
-.nav-links.active{display:flex;}
-.nav-links li a{
-  text-decoration:none;
-  color:#0f172a;
-  font-weight:600;
-  transition:0.3s;
+
+.nav-links a{
+color:#2563eb;
+font-weight:600;
+text-decoration:none;
+transition:0.3s;
+font-size:18px;
 }
-.nav-links li a:hover{color:#2563eb;}
+.nav-links a:hover{color:#1d4ed8}
+
+/* Close button for menu */
+.nav-links .close-btn{
+position:absolute;
+top:15px;
+right:15px;
+font-size:22px;
+cursor:pointer;
+color:#2563eb;
+}
 
 /* MAIN */
-main{max-width:1100px;margin:auto;padding:60px 20px;}
+main{max-width:1100px;margin:auto;padding:60px 20px}
 
 /* SECTIONS */
 section{
-  background:#ffffff;
-  border:1px solid #e5e7eb;
-  border-radius:18px;
-  padding:30px;
-  margin-bottom:40px;
-  box-shadow:0 6px 15px rgba(0,0,0,.04);
+background:#ffffff;
+border:1px solid #e5e7eb;
+border-radius:18px;
+padding:30px;
+margin-bottom:40px;
+box-shadow:0 6px 15px rgba(0,0,0,.04);
 }
-h2{margin-bottom:15px;font-size:1.9rem;}
+h2{margin-bottom:15px;font-size:1.9rem}
 
 /* GRID */
 .grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:18px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:18px;
 }
 .card{
-  background:linear-gradient(135deg,#eff6ff,#ffffff);
-  border:1px solid #e5e7eb;
-  border-radius:14px;
-  padding:20px;
+background:linear-gradient(135deg,#eff6ff,#ffffff);
+border:1px solid #e5e7eb;
+border-radius:14px;
+padding:20px;
 }
 
 /* TOKEN BOX */
 .token-box{
-  font-family:monospace;
-  word-break:break-all;
-  background:#f1f5f9;
-  padding:12px;
-  border-radius:8px;
+font-family:monospace;
+word-break:break-all;
+background:#f1f5f9;
+padding:12px;
+border-radius:8px;
 }
 
 /* BUTTON */
 .btn{
-  display:inline-block;
-  padding:12px 24px;
-  background:#2563eb;
-  color:white;
-  border-radius:10px;
-  text-decoration:none;
-  font-weight:600;
-  transition:.3s;
+display:inline-block;
+padding:12px 24px;
+background:#2563eb;
+color:white;
+border-radius:10px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
 }
-.btn:hover{background:#1d4ed8;}
+.btn:hover{background:#1d4ed8}
 
 /* LOGO */
-.logo img{max-width:140px;margin:10px;}
+.logo img{max-width:140px;margin:10px}
+
+/* SOCIAL NETWORK ICONS */
+.social-icons{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:15px;
+}
+.social-icons a{
+color:#2563eb;
+font-size:32px;
+transition:0.3s;
+}
+.social-icons a:hover{color:#1d4ed8}
 
 /* FOOTER */
-footer{text-align:center;padding:25px;font-size:14px;color:#64748b;border-top:1px solid #e5e7eb;}
+footer{
+text-align:center;
+padding:25px;
+font-size:14px;
+color:#64748b;
+border-top:1px solid #e5e7eb;
+}
 
 /* MOBILE */
 @media(max-width:768px){
-  header h1{font-size:2.2rem;}
-  main{padding:35px 15px;}
+header h1{font-size:2.2rem}
+main{padding:35px 15px}
+.nav-links{width:220px;padding-top:70px;}
 }
 </style>
 </head>
-
 <body>
 
 <header>
 <h1>BITEX <span>(BIT)</span></h1>
 <p>Next Generation Utility Token on Polygon Network</p>
 <a class="btn" href="#tokenomics">Explore Token</a>
+
+<!-- Hamburger Menu -->
+<div class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></div>
+<div class="nav-links" id="nav-links">
+<div class="close-btn" id="close-btn"><i class="fas fa-times"></i></div>
+<a href="#home">Home</a>
+<a href="#features">Features</a>
+<a href="#tokenomics">Tokenomics</a>
+<a href="#social">Social Network</a>
+<a href="#howtobuy">How to Buy</a>
+<a href="#about">About</a>
+<a href="#team">Team</a>
+<a href="#contact">Contact</a>
+</div>
 </header>
 
-<!-- HAMBURGER MENU -->
-<div class="hamburger" id="hamburger">
-  <span></span>
-  <span></span>
-  <span></span>
+<main id="home">
+
+<section id="about">
+<h2>About BITEX</h2>
+<p>
+BITEX (BIT) is a decentralized utility token built on Polygon PoS network, designed to provide fast, secure and low-cost transactions.
+The project focuses on DeFi integrations, blockchain payments, and community-driven financial ecosystems.
+</p>
+</section>
+
+<section id="features">
+<h2>Core Features</h2>
+<div class="grid">
+<div class="card">⚡ Fast Transactions</div>
+<div class="card">💸 Ultra Low Fees</div>
+<div class="card">🔐 Secure Smart Contract</div>
+<div class="card">🌍 Global Accessibility</div>
+<div class="card">🤝 Community Driven</div>
+<div class="card">🔗 DeFi Ready</div>
 </div>
-
-<ul class="nav-links" id="navLinks">
-  <li><a href="#home">Home</a></li>
-  <li><a href="#tokenomics">Tokenomics</a></li>
-  <li><a href="#features">Features</a></li>
-  <li><a href="#team">Team</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#social">Social</a></li>
-  <li><a href="#howtobuy">How to Buy</a></li>
-  <li><a href="#about">About</a></li>
-</ul>
-
-<main>
-
-<section id="home">
-<h2>Welcome to BITEX</h2>
-<p>Next-generation utility token on the Polygon Network. Fast, secure, and community-driven.</p>
 </section>
 
 <section id="tokenomics">
@@ -184,21 +214,31 @@ footer{text-align:center;padding:25px;font-size:14px;color:#64748b;border-top:1p
 </div>
 </section>
 
-<section id="features">
-<h2>Core Features</h2>
-<div class="grid">
-<div class="card">⚡ Fast Transactions</div>
-<div class="card">💸 Ultra Low Fees</div>
-<div class="card">🔐 Secure Smart Contract</div>
-<div class="card">🌍 Global Accessibility</div>
-<div class="card">🤝 Community Driven</div>
-<div class="card">🔗 DeFi Ready</div>
+<section id="social">
+<h2>Social Network</h2>
+<div class="social-icons">
+<a href="https://github.com/tokenbitex/tokenbitex" target="_blank"><i class="fab fa-github"></i></a>
+<a href="https://t.me/TokenBitexOfficial" target="_blank"><i class="fab fa-telegram"></i></a>
+<a href="https://twitter.com/tokenbitex" target="_blank"><i class="fab fa-twitter"></i></a>
+<a href="https://medium.com/@tokenbitex/introducing-bitex-bitex-your-erc-20-utility-token-on-polygon-pos-introduction-bitex-bitex-is-5e21fcaa5a05" target="_blank"><i class="fab fa-medium"></i></a>
+<a href="https://www.linkedin.com/in/token-bitex-832a5b3a1" target="_blank"><i class="fab fa-linkedin"></i></a>
+<a href="https://bitcointalk.org/index.php?topic=5570074.new#new" target="_blank"><i class="fab fa-bitcoin"></i></a>
+<a href="https://www.facebook.com/tokenbitex" target="_blank"><i class="fab fa-facebook"></i></a>
+<a href="https://discord.gg/35xnXKawk" target="_blank"><i class="fab fa-discord"></i></a>
+<a href="https://www.instagram.com/tokenbitex/" target="_blank"><i class="fab fa-instagram"></i></a>
 </div>
+</section>
+
+<section id="howtobuy">
+<h2>How to Buy</h2>
+<p>Instructions and links to purchase BITEX on exchanges.</p>
 </section>
 
 <section id="team">
 <h2>Project Team</h2>
-<p>BITEX is developed by blockchain engineers and crypto specialists focused on security, transparency, and sustainable growth.</p>
+<p>
+BITEX is developed by blockchain engineers and crypto specialists focused on security, transparency and sustainable growth.
+</p>
 <a class="btn" href="https://www.linkedin.com/in/token-bitex-832a5b3a1" target="_blank">LinkedIn Profile</a>
 </section>
 
@@ -207,32 +247,6 @@ footer{text-align:center;padding:25px;font-size:14px;color:#64748b;border-top:1p
 <p>Email: <a href="mailto:contact@tokenbitex.org">contact@tokenbitex.org</a></p>
 <p>Website: <a href="https://tokenbitex.org">https://tokenbitex.org</a></p>
 <p>Telegram: <a href="https://t.me/TokenBitexOfficial">https://t.me/TokenBitexOfficial</a></p>
-</section>
-
-<section id="social">
-<h2>Social Media</h2>
-<ul style="list-style:none;display:flex;flex-wrap:wrap;gap:15px;padding:0;">
-<li><a href="https://github.com/tokenbitex/tokenbitex" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
-<li><a href="https://t.me/TokenBitexOfficial" target="_blank"><i class="fab fa-telegram"></i> Telegram</a></li>
-<li><a href="https://twitter.com/tokenbitex" target="_blank"><i class="fab fa-twitter"></i> Twitter (X)</a></li>
-<li><a href="https://medium.com/@tokenbitex" target="_blank"><i class="fab fa-medium"></i> Medium</a></li>
-<li><a href="https://www.linkedin.com/in/token-bitex-832a5b3a1" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-<li><a href="https://bitcointalk.org/index.php?topic=5570074.new#new" target="_blank"><i class="fab fa-bitcoin"></i> Bitcointalk</a></li>
-<li><a href="https://www.facebook.com/tokenbitex" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
-<li><a href="https://discord.gg/35xnXKawk" target="_blank"><i class="fab fa-discord"></i> Discord</a></li>
-<li><a href="https://www.instagram.com/tokenbitex/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
-</ul>
-</section>
-
-<section id="howtobuy">
-<h2>How to Buy</h2>
-<p>Instructions for buying BITEX tokens and the exchanges where they are available...</p>
-</section>
-
-<section id="about">
-<h2>About BITEX</h2>
-<p>BITEX (BIT) is a decentralized utility token built on Polygon PoS network, designed to provide fast, secure and low-cost transactions.
-The project focuses on DeFi integrations, blockchain payments, and community-driven financial ecosystems.</p>
 </section>
 
 <section class="logo">
@@ -248,14 +262,12 @@ The project focuses on DeFi integrations, blockchain payments, and community-dri
 </footer>
 
 <script>
-// HAMBURGER TOGGLE
-const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('navLinks');
+const menuToggle=document.getElementById('menu-toggle');
+const navLinks=document.getElementById('nav-links');
+const closeBtn=document.getElementById('close-btn');
 
-hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('active');
-  navLinks.classList.toggle('active');
-});
+menuToggle.addEventListener('click',()=>{navLinks.style.display='flex';});
+closeBtn.addEventListener('click',()=>{navLinks.style.display='none';});
 </script>
 
 </body>
