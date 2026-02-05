@@ -6,12 +6,13 @@
 <title>BITEX (BIT) | Utility Token on Polygon</title>
 <meta name="description" content="BITEX (BIT) is a fast, low-fee utility token built on Polygon for payments, DeFi, and blockchain applications.">
 
+<!-- Font Awesome -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
 <style>
-/* Reset & body */
+/* RESET */
 *{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:Segoe UI,Arial,sans-serif;background:linear-gradient(180deg,#f8fafc,#ffffff);color:#0f172a;line-height:1.7;}
+body{font-family:Segoe UI,Arial,sans-serif;background:linear-gradient(180deg,#f8fafc,#ffffff);color:#0f172a;line-height:1.7;overflow-x:hidden;}
 
 /* HEADER */
 header{padding:90px 20px;text-align:center;background:radial-gradient(circle at top,#e0f2fe,#ffffff);}
@@ -22,9 +23,9 @@ header .btn{display:inline-block;margin-top:20px;padding:12px 24px;background:#2
 header .btn:hover{background:#1d4ed8;}
 
 /* NAV MENU */
-.menu-toggle{position:fixed;top:20px;left:20px;font-size:2rem;color:#2563eb;cursor:pointer;z-index:999;}
+.menu-toggle{position:fixed;top:20px;left:20px;font-size:2rem;color:#2563eb;cursor:pointer;z-index:999;transition:.3s;}
 .menu-toggle:hover{color:#1d4ed8;}
-nav{position:fixed;top:0;left:-250px;width:250px;height:100%;background:#ffffff;box-shadow:2px 0 12px rgba(0,0,0,0.15);transition:0.3s;padding-top:60px;z-index:998;}
+nav{position:fixed;top:0;left:-260px;width:260px;height:100%;background:#ffffff;box-shadow:2px 0 12px rgba(0,0,0,0.15);transition:0.3s;padding-top:60px;z-index:998;}
 nav.active{left:0;}
 nav ul{list-style:none;padding:0;}
 nav ul li{margin:20px 0;}
@@ -52,9 +53,9 @@ h2{margin-bottom:15px;font-size:1.9rem;}
 .btn:hover{background:#1d4ed8;}
 
 /* SOCIAL ICONS */
-.social-icons{display:flex;gap:15px;justify-content:center;margin-top:15px;}
-.social-icons a{color:#2563eb;font-size:28px;transition:.3s;}
-.social-icons a:hover{color:#1d4ed8;}
+.social-icons{display:flex;gap:20px;justify-content:center;margin-top:15px;}
+.social-icons a{color:#2563eb;font-size:32px;transition:.3s;display:flex;align-items:center;justify-content:center;width:50px;height:50px;border-radius:50%;background:#e0f2fe;}
+.social-icons a:hover{color:#fff;background:#2563eb;transform:scale(1.1);transition:.3s;}
 
 /* BUY BUTTONS */
 .buy-btns{display:flex;gap:15px;flex-wrap:wrap;margin-top:15px;}
@@ -93,7 +94,6 @@ footer{text-align:center;padding:25px;font-size:14px;color:#64748b;border-top:1p
 </header>
 
 <main>
-
 <section id="tokenomics">
 <h2>Tokenomics</h2>
 <div class="grid">
@@ -104,11 +104,11 @@ footer{text-align:center;padding:25px;font-size:14px;color:#64748b;border-top:1p
 </div>
 <br>
 <b>Contract Address:</b>
-<div class="token-box" onclick="copyContract()">
+<div class="token-box" onclick="copyContract('0x4296dD83e49d01BB801172d8e938FafE6dcF86A0')">
 <code id="contractAddress">0x4296dD83e49d01BB801172d8e938FafE6dcF86A0</code>
 <i class="fas fa-copy"></i>
 </div>
-<p style="font-size:0.9rem;color:#475569;">Click the address to copy</p>
+<p style="font-size:0.9rem;color:#475569;">Click to copy contract</p>
 </section>
 
 <section id="features">
@@ -155,14 +155,6 @@ footer{text-align:center;padding:25px;font-size:14px;color:#64748b;border-top:1p
 <li>Swap your tokens (MATIC or USDT) for BITEX.</li>
 <li>Confirm the transaction in your wallet.</li>
 </ol>
-
-<b>Contract Address:</b>
-<div class="token-box" onclick="copyContract()">
-<code id="contractAddress2">0x4296dD83e49d01BB801172d8e938FafE6dcF86A0</code>
-<i class="fas fa-copy"></i>
-</div>
-<p style="font-size:0.9rem;color:#475569;">Click the address to copy</p>
-
 <div class="buy-btns">
 <a href="https://quickswap.exchange/#/swap" target="_blank" class="btn"><i class="fas fa-exchange-alt"></i> QuickSwap</a>
 <a href="https://app.uniswap.org/#/swap" target="_blank" class="btn"><i class="fas fa-exchange-alt"></i> Uniswap</a>
@@ -180,17 +172,25 @@ footer{text-align:center;padding:25px;font-size:14px;color:#64748b;border-top:1p
 
 <script>
 /* MENU TOGGLE */
-const menuToggle = document.getElementById("menu-toggle");
-const nav = document.getElementById("nav");
-const closeMenu = document.getElementById("close-menu");
+const menuToggle=document.getElementById("menu-toggle");
+const nav=document.getElementById("nav");
+const closeMenu=document.getElementById("close-menu");
 
 menuToggle.addEventListener("click",()=>{nav.classList.add("active");});
 closeMenu.addEventListener("click",()=>{nav.classList.remove("active");});
 
+/* HIDE MENU TOGGLE ON SCROLL */
+window.addEventListener("scroll",()=>{
+  if(window.scrollY>100){
+    menuToggle.style.display="none";
+  }else{
+    menuToggle.style.display="block";
+  }
+});
+
 /* COPY CONTRACT */
-function copyContract(){
-  const copyText = document.getElementById("contractAddress").textContent || document.getElementById("contractAddress2").textContent;
-  navigator.clipboard.writeText(copyText).then(()=>{alert("Contract address copied to clipboard!");});
+function copyContract(addr){
+  navigator.clipboard.writeText(addr).then(()=>{alert("Contract address copied!");});
 }
 </script>
 
