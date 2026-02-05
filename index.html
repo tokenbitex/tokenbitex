@@ -6,7 +6,6 @@
 <title>BITEX (BIT) | Utility Token on Polygon</title>
 <meta name="description" content="BITEX (BIT) is a fast, low-fee utility token built on Polygon for payments, DeFi, and blockchain applications.">
 
-<link rel="stylesheet" href="assets/css/style.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
 <style>
@@ -50,7 +49,7 @@ header .btn{margin-top:15px}
 .nav-menu {
   position: fixed;
   top: 0;
-  left: -260px; 
+  left: -260px;
   width: 260px;
   height: 100%;
   background: #ffffff;
@@ -128,15 +127,6 @@ h2{margin-bottom:15px;font-size:1.9rem}
   transition:.3s;
 }
 .btn:hover{background:#1d4ed8}
-
-/* FOOTER */
-footer{
-  text-align:center;
-  padding:25px;
-  font-size:14px;
-  color:#64748b;
-  border-top:1px solid #e5e7eb;
-}
 
 /* SOCIAL ICONS */
 .social-icons{
@@ -249,9 +239,15 @@ footer{
 
 <section id="howtobuy">
 <h2>How to Buy BITEX</h2>
-<p>Swap your tokens (MATIC or USDT) for BITEX.</p>
+<p>Swap your tokens (MATIC) for BITEX using:</p>
+<div class="grid" style="gap:15px; margin-bottom:15px;">
+<a href="https://quickswap.exchange/#/swap" target="_blank" class="btn"><i class="fas fa-exchange-alt"></i> QuickSwap</a>
+<a href="https://app.uniswap.org/#/swap" target="_blank" class="btn"><i class="fas fa-exchange-alt"></i> Uniswap</a>
+</div>
+<div style="display:flex;align-items:center;flex-wrap:wrap;">
 <div class="token-box" id="contractAddress">0x4296dD83e49d01BB801172d8e938FafE6dcF86A0</div>
 <button class="copy-btn" onclick="copyContract()">Copy</button>
+</div>
 <script>
 function copyContract(){
   const contract = document.getElementById('contractAddress').innerText;
@@ -279,12 +275,9 @@ hamburger.addEventListener('click', ()=>{navMenu.style.left='0';});
 closeMenu.addEventListener('click', ()=>{navMenu.style.left='-260px';});
 
 // Hide hamburger on scroll down
-let lastScroll = 0;
 window.addEventListener('scroll', ()=>{
-  const currentScroll = window.pageYOffset;
-  if(currentScroll > 50){hamburger.style.opacity='0';} 
+  if(window.pageYOffset > 50){hamburger.style.opacity='0';} 
   else {hamburger.style.opacity='1';}
-  lastScroll = currentScroll;
 });
 </script>
 
