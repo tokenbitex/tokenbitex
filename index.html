@@ -10,7 +10,6 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
 <style>
-/* RESET */
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:Segoe UI,Arial,sans-serif;background:linear-gradient(180deg,#f8fafc,#ffffff);color:#0f172a;line-height:1.7;overflow-x:hidden;}
 
@@ -53,9 +52,12 @@ h2{margin-bottom:15px;font-size:1.9rem;}
 .btn:hover{background:#1d4ed8;}
 
 /* SOCIAL ICONS */
-.social-icons{display:flex;gap:20px;justify-content:center;margin-top:15px;}
-.social-icons a{color:#2563eb;font-size:32px;transition:.3s;display:flex;align-items:center;justify-content:center;width:50px;height:50px;border-radius:50%;background:#e0f2fe;}
-.social-icons a:hover{color:#fff;background:#2563eb;transform:scale(1.1);transition:.3s;}
+.social-icons{display:flex;flex-wrap:wrap;gap:15px;justify-content:center;margin-top:15px;}
+.social-icons a{color:#2563eb;font-size:28px;display:flex;align-items:center;justify-content:center;width:50px;height:50px;border-radius:50%;background:#e0f2fe;transition:.3s;position:relative;overflow:hidden;box-shadow:0 3px 8px rgba(0,0,0,0.15);}
+.social-icons a::before{content:"";position:absolute;inset:0;border-radius:50%;transition:0.3s;z-index:0;}
+.social-icons a:hover::before{background:#2563eb;opacity:0.2;}
+.social-icons a i{z-index:1;}
+.social-icons a:hover i{color:#ffffff;transform:scale(1.2);transition:.3s;}
 
 /* BUY BUTTONS */
 .buy-btns{display:flex;gap:15px;flex-wrap:wrap;margin-top:15px;}
@@ -171,27 +173,13 @@ footer{text-align:center;padding:25px;font-size:14px;color:#64748b;border-top:1p
 </footer>
 
 <script>
-/* MENU TOGGLE */
 const menuToggle=document.getElementById("menu-toggle");
 const nav=document.getElementById("nav");
 const closeMenu=document.getElementById("close-menu");
-
 menuToggle.addEventListener("click",()=>{nav.classList.add("active");});
 closeMenu.addEventListener("click",()=>{nav.classList.remove("active");});
-
-/* HIDE MENU TOGGLE ON SCROLL */
-window.addEventListener("scroll",()=>{
-  if(window.scrollY>100){
-    menuToggle.style.display="none";
-  }else{
-    menuToggle.style.display="block";
-  }
-});
-
-/* COPY CONTRACT */
-function copyContract(addr){
-  navigator.clipboard.writeText(addr).then(()=>{alert("Contract address copied!");});
-}
+window.addEventListener("scroll",()=>{menuToggle.style.display=(window.scrollY>100)?"none":"block";});
+function copyContract(addr){navigator.clipboard.writeText(addr).then(()=>{alert("Contract address copied!");});}
 </script>
 
 </body>
