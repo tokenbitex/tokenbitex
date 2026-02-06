@@ -1,3 +1,4 @@
+کد سایت
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +7,7 @@
 <title>BITEX (BIT) | Utility Token on Polygon</title>
 <meta name="description" content="BITEX (BIT) is a fast, low-fee utility token built on Polygon for payments, DeFi, and blockchain applications.">
 
+<link rel="stylesheet" href="assets/css/style.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
 <style>
@@ -28,7 +30,7 @@ header span{color:#2563eb}
 header p{color:#475569;margin-top:10px;font-size:1.1rem}
 header .btn{margin-top:15px}
 
-/* HAMBURGER MENU */
+/* NAV - Hamburger */
 .hamburger {
   position: fixed;
   top: 20px;
@@ -37,18 +39,18 @@ header .btn{margin-top:15px}
   flex-direction: column;
   cursor: pointer;
   z-index: 1000;
-  transition: opacity 0.3s;
 }
 .hamburger div {
   width: 28px;
   height: 3px;
   background-color: #2563eb;
   margin: 5px 0;
+  transition: 0.4s;
 }
 .nav-menu {
   position: fixed;
   top: 0;
-  left: -260px;
+  left: -260px; /* Initially hidden */
   width: 260px;
   height: 100%;
   background: #ffffff;
@@ -65,7 +67,9 @@ header .btn{margin-top:15px}
   font-weight: 600;
   color: #2563eb;
   font-size: 1.1rem;
+  transition: 0.3s;
 }
+.nav-menu a:hover { color: #1d4ed8; }
 .nav-menu .close-menu {
   position: absolute;
   top: 15px;
@@ -105,9 +109,11 @@ h2{margin-bottom:15px;font-size:1.9rem}
 /* TOKEN BOX */
 .token-box{
   font-family:monospace;
+  word-break:break-all;
   background:#f1f5f9;
   padding:12px;
   border-radius:8px;
+  display:inline-block;
 }
 
 /* BUTTON */
@@ -119,6 +125,17 @@ h2{margin-bottom:15px;font-size:1.9rem}
   border-radius:10px;
   text-decoration:none;
   font-weight:600;
+  transition:.3s;
+}
+.btn:hover{background:#1d4ed8}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:25px;
+  font-size:14px;
+  color:#64748b;
+  border-top:1px solid #e5e7eb;
 }
 
 /* SOCIAL ICONS */
@@ -127,37 +144,65 @@ h2{margin-bottom:15px;font-size:1.9rem}
   justify-content:center;
   gap:15px;
   flex-wrap:wrap;
+  margin-top:20px;
 }
 .social-icons a{
-  font-size:28px;
   color:#2563eb;
+  font-size:24px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:50px;
+  height:50px;
+  background:#e0f2fe;
+  border-radius:50%;
+  transition:.3s;
 }
+.social-icons a:hover{background:#2563eb;color:#ffffff}
 
-/* COPY BUTTON */
-.copy-btn{
-  background:#2563eb;
-  color:#fff;
-  border:none;
-  padding:5px 10px;
-  cursor:pointer;
-  border-radius:5px;
-  margin-left:10px;
+/* ABOUT GRID */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+}
+.about-box {
+  background: linear-gradient(135deg, #e0f7ff, #ffffff);
+  border: 1px solid #cce7f1;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+.about-box h3 {
+  color: #0077cc;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+.about-box p, .about-box ul {
+  color: #0f172a;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.about-box ul li { margin-bottom: 8px; }
+
+/* MOBILE */
+@media(max-width:768px){
+  header h1{font-size:2.2rem}
+  main{padding:35px 15px}
 }
 </style>
+
 </head>
 <body>
 
-<header>
-<h1>BITEX <span>(BIT)</span></h1>
-<p>Next Generation Utility Token on Polygon Network</p>
-<a class="btn" href="#tokenomics">Explore Token</a>
-</header>
-
+<!-- Hamburger Menu -->
 <div class="hamburger" id="hamburger">
-  <div></div><div></div><div></div>
+  <div></div>
+  <div></div>
+  <div></div>
 </div>
-
-<nav class="nav-menu" id="navMenu">
+<div class="nav-menu" id="navMenu">
   <span class="close-menu" id="closeMenu">&times;</span>
   <a href="#home">Home</a>
   <a href="#tokenomics">Tokenomics</a>
@@ -167,48 +212,146 @@ h2{margin-bottom:15px;font-size:1.9rem}
   <a href="#social">Social</a>
   <a href="#howtobuy">How to Buy</a>
   <a href="#about">About</a>
-</nav>
+</div>
 
-<main id="home">
+<header id="home">
+<h1>BITEX <span>(BIT)</span></h1>
+<p>Next Generation Utility Token on Polygon Network</p>
+<br>
+<a class="btn" href="#tokenomics">Explore Token</a>
+</header>
 
-<!-- sections بالا بدون تغییر -->
+<main>
 
+<!-- About BITEX -->
 <section id="about">
-<h2>About BITEX</h2>
+  <h2>About BITEX</h2>
+  <p><strong>BITEX (BIT)</strong> is a decentralized utility token built on the Polygon PoS network, designed to provide fast, secure, and low-cost transactions across blockchain-based applications. BITEX empowers the crypto community with DeFi integrations, payments, and innovative financial solutions.</p>
 
-<p><strong>BITEX (BIT)</strong> is a decentralized utility token built on the Polygon PoS network, designed to deliver fast, secure, and cost-efficient blockchain transactions.</p>
+  <div class="about-grid">
+    <div class="about-box">
+      <h3>Project Overview</h3>
+      <p>Launched in 2026, BITEX is focused on building a transparent and scalable ecosystem for developers, investors, and traders. BITEX seeks to become a key asset in the Polygon ecosystem.</p>
+    </div>
 
-<p>By leveraging Polygon’s scalability and low transaction fees, BITEX enables seamless interaction with decentralized finance (DeFi), digital payments, and future blockchain-based applications.</p>
+    <div class="about-box">
+      <h3>Vision & Mission</h3>
+      <ul>
+        <li><strong>Vision:</strong> To be a leading utility token enabling seamless blockchain transactions globally.</li>
+        <li><strong>Mission:</strong> Provide a reliable, secure, and community-driven platform for trading and DeFi access.</li>
+      </ul>
+    </div>
 
-<h3>🎯 Project Vision</h3>
-<p>The vision of BITEX is to become a reliable and widely adopted utility token within the Polygon ecosystem, focusing on real-world usability, transparency, and community-driven growth.</p>
+    <div class="about-box">
+      <h3>Use Cases</h3>
+      <ul>
+        <li>Payment gateway for decentralized applications</li>
+        <li>DeFi protocol integration and staking</li>
+        <li>Liquidity provision and token swapping on Polygon</li>
+        <li>Community-driven governance and rewards</li>
+      </ul>
+    </div>
 
-<h3>🛠 Development Strategy</h3>
-<p>BITEX follows a transparent development strategy emphasizing smart contract security, sustainable liquidity, and long-term ecosystem expansion.</p>
+    <div class="about-box">
+      <h3>Development Team</h3>
+      <p>BITEX is developed by experienced blockchain engineers and crypto specialists, committed to transparency, security, and sustainable growth.</p>
+    </div>
 
-<h3>🚀 Project Roadmap</h3>
-<ul>
-<li>Phase 1: Token deployment, website launch, community setup</li>
-<li>Phase 2: Liquidity provision, token & LP locking</li>
-<li>Phase 3: DeFi integrations and partnerships</li>
-<li>Phase 4: Advanced utilities such as staking and governance</li>
-</ul>
-
-<p>BITEX is committed to innovation, trust, and long-term value creation.</p>
+    <div class="about-box">
+      <h3>Roadmap & Future Plans</h3>
+      <ul>
+        <li>Q1 2026: Launch on Polygon network, website deployment, initial liquidity provision</li>
+        <li>Q2 2026: Partnerships with DEXs, staking integration, community programs</li>
+        <li>Q3 2026: NFT & DeFi expansion, cross-chain integrations</li>
+        <li>Q4 2026: Advanced DeFi tools, governance implementation, global adoption</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
-</main>
+<!-- Features -->
+<section id="features">
+<h2>Core Features</h2>
+<div class="grid">
+<div class="card">⚡ Fast Transactions</div>
+<div class="card">💸 Ultra Low Fees</div>
+<div class="card">🔐 Secure Smart Contract</div>
+<div class="card">🌍 Global Accessibility</div>
+<div class="card">🤝 Community Driven</div>
+<div class="card">🔗 DeFi Ready</div>
+</div>
+</section>
+
+<!-- Tokenomics -->
+<section id="tokenomics">
+<h2>Tokenomics</h2>
+<div class="grid">
+<div class="card"><b>Name:</b> BITEX</div>
+<div class="card"><b>Symbol:</b> BIT</div>
+<div class="card"><b>Network:</b> Polygon PoS</div>
+<div class="card"><b>Standard:</b> ERC-20</div>
+</div>
+<br>
+<b>Contract Address:</b>
+<div class="token-box">
+<a href="https://polygonscan.com/token/0x4296dD83e49d01BB801172d8e938FafE6dcF86A0" target="_blank">
+0x4296dD83e49d01BB801172d8e938FafE6dcF86A0
+</a>
+</div>
+</section>
+
+<!-- How to Buy -->
+<section id="howtobuy">
+<h2>How to Buy</h2>
+<p>Swap your tokens (MATIC) for BITEX on supported DEXs.</p>
+<p>Contract Address (copyable): <span class="token-box">0x4296dD83e49d01BB801172d8e938FafE6dcF86A0</span></p>
+</section>
+
+<!-- Team -->
+<section id="team">
+<h2>Project Team</h2>
+<p>BITEX is developed by blockchain engineers and crypto specialists focused on security, transparency and sustainable growth.</p>
+<a class="btn" href="https://www.linkedin.com/in/token-bitex-832a5b3a1" target="_blank">LinkedIn Profile</a>
+</section>
+
+<!-- Social -->
+<section id="social">
+<h2>Social</h2>
+<div class="social-icons">
+  <a href="https://github.com/tokenbitex/tokenbitex" target="_blank"><i class="fab fa-github"></i></a>
+  <a href="https://t.me/TokenBitexOfficial" target="_blank"><i class="fab fa-telegram"></i></a>
+  <a href="https://twitter.com/tokenbitex" target="_blank"><i class="fab fa-twitter"></i></a>
+  <a href="https://medium.com/@tokenbitex" target="_blank"><i class="fab fa-medium"></i></a>
+  <a href="https://www.linkedin.com/in/token-bitex-832a5b3a1" target="_blank"><i class="fab fa-linkedin"></i></a>
+  <a href="https://bitcointalk.org/index.php?topic=5570074.new#new" target="_blank"><i class="fab fa-bitcoin"></i></a>
+  <a href="https://www.facebook.com/tokenbitex" target="_blank"><i class="fab fa-facebook"></i></a>
+  <a href="https://discord.gg/35xnXKawk" target="_blank"><i class="fab fa-discord"></i></a>
+  <a href="https://www.instagram.com/tokenbitex/" target="_blank"><i class="fab fa-instagram"></i></a>
+</div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+<h2>Contact</h2>
+<p>Email: <a href="mailto:contact@tokenbitex.org">contact@tokenbitex.org</a></p>
+<p>Website: <a href="https://tokenbitex.org">https://tokenbitex.org</a></p>
+<p>Telegram: <a href="https://t.me/TokenBitexOfficial">https://t.me/TokenBitexOfficial</a></p>
+</section>
+
+<footer>
+<p>© 2026 BITEX — All Rights Reserved</p>
+</footer>
 
 <script>
-const hamburger=document.getElementById('hamburger');
-const navMenu=document.getElementById('navMenu');
-const closeMenu=document.getElementById('closeMenu');
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('navMenu');
+const closeMenu = document.getElementById('closeMenu');
 
-hamburger.onclick=()=>navMenu.style.left='0';
-closeMenu.onclick=()=>navMenu.style.left='-260px';
-
-window.addEventListener('scroll',()=>{
-  hamburger.style.opacity=window.scrollY>50?'0':'1';
+hamburger.addEventListener('click', () => {
+  navMenu.style.left = '0';
+});
+closeMenu.addEventListener('click', () => {
+  navMenu.style.left = '-260px';
 });
 </script>
 
