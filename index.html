@@ -13,13 +13,15 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Segoe UI,Arial,sans-serif;background:linear-gradient(180deg,#f8fafc,#ffffff);color:#0f172a;line-height:1.7}
+a{color:#2563eb;text-decoration:none}
+a:hover{color:#1d4ed8}
 header{padding:90px 20px;text-align:center;background:radial-gradient(circle at top,#e0f2fe,#ffffff)}
 header h1{font-size:3.2rem;font-weight:800}
 header span{color:#2563eb}
 header p{color:#475569;margin-top:10px;font-size:1.1rem}
 header .btn{margin-top:15px}
 
-.hamburger{position:fixed;top:20px;left:20px;display:flex;flex-direction:column;cursor:pointer;z-index:1000}
+.hamburger{position:fixed;top:20px;left:20px;display:flex;flex-direction:column;cursor:pointer;z-index:1000;transition:0.3s}
 .hamburger div{width:28px;height:3px;background:#2563eb;margin:5px 0;transition:.4s}
 .nav-menu{position:fixed;top:0;left:-260px;width:260px;height:100%;background:#fff;box-shadow:2px 0 12px rgba(0,0,0,.1);padding:40px 20px;display:flex;flex-direction:column;gap:25px;transition:.4s;z-index:999}
 .nav-menu a{text-decoration:none;font-weight:600;color:#2563eb;font-size:1.1rem;transition:.3s}
@@ -45,6 +47,12 @@ footer{text-align:center;padding:25px;font-size:14px;color:#64748b;border-top:1p
 .about-box p,.about-box ul{color:#0f172a;font-size:1rem;line-height:1.6}
 .about-box ul li{margin-bottom:8px}
 
+/* HOW TO BUY TABS */
+.tabs{display:flex;gap:10px;margin-bottom:15px}
+.tab{padding:10px 20px;border:1px solid #2563eb;border-radius:8px;cursor:pointer;background:#eff6ff;color:#2563eb;font-weight:600;transition:.3s}
+.tab.active{background:#2563eb;color:#fff}
+
+/* MOBILE */
 @media(max-width:768px){header h1{font-size:2.2rem} main{padding:35px 15px}}
 </style>
 </head>
@@ -149,21 +157,19 @@ footer{text-align:center;padding:25px;font-size:14px;color:#64748b;border-top:1p
 </div>
 </section>
 
-<!-- ✅ UPDATED HOW TO BUY -->
+<!-- ✅ UPDATED HOW TO BUY WITH TABS -->
 <section id="howtobuy">
 <h2>How to Buy BITEX</h2>
 
-<ol>
-  <li>Install a Web3 wallet such as MetaMask.</li>
-  <li>Add Polygon (PoS) network to your wallet.</li>
-  <li>Buy or transfer MATIC to your wallet.</li>
-  <li>Go to a supported DEX like <a href="https://quickswap.exchange/#/swap" target="_blank">QuickSwap</a>.</li>
-  <li>Paste the BITEX contract address and swap MATIC for BIT.</li>
-</ol>
+<div class="tabs">
+  <div class="tab active" data-dex="quickswap">QuickSwap</div>
+  <div class="tab" data-dex="uniswap">Uniswap</div>
+</div>
 
-<p><strong>Contract Address:</strong></p>
-<div class="token-box">
-0x4296dD83e49d01BB801172d8e938FafE6dcF86A0
+<div id="dex-content">
+  <p><strong>QuickSwap:</strong> Swap MATIC for BITEX on <a href="https://quickswap.exchange/#/swap" target="_blank">QuickSwap</a>.</p>
+  <p>Contract Address:</p>
+  <div class="token-box">0x4296dD83e49d01BB801172d8e938FafE6dcF86A0</div>
 </div>
 
 <p style="margin-top:10px;color:#475569;font-size:0.95rem;">
@@ -210,8 +216,36 @@ footer{text-align:center;padding:25px;font-size:14px;color:#64748b;border-top:1p
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('navMenu');
 const closeMenu = document.getElementById('closeMenu');
+
+// Hamburger toggle
 hamburger.onclick = () => navMenu.style.left = '0';
 closeMenu.onclick = () => navMenu.style.left = '-260px';
+
+// Hide hamburger on scroll
+window.addEventListener('scroll', () => {
+  if(window.scrollY > 50){
+    hamburger.style.display = 'none';
+  }else{
+    hamburger.style.display = 'flex';
+  }
+});
+
+// Tabs for How to Buy
+const tabs = document.querySelectorAll('.tab');
+const dexContent = document.getElementById('dex-content');
+
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    tabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    const dex = tab.dataset.dex;
+    if(dex === 'quickswap'){
+      dexContent.innerHTML = `<p><strong>QuickSwap:</strong> Swap MATIC for BITEX on <a href="https://quickswap.exchange/#/swap" target="_blank">QuickSwap</a>.</p><p>Contract Address:</p><div class="token-box">0x4296dD83e49d01BB801172d8e938FafE6dcF86A0</div>`;
+    }else if(dex === 'uniswap'){
+      dexContent.innerHTML = `<p><strong>Uniswap:</strong> Swap ETH for BITEX on <a href="https://app.uniswap.org/#/swap" target="_blank">Uniswap</a>.</p><p>Contract Address:</p><div class="token-box">0x4296dD83e49d01BB801172d8e938FafE6dcF86A0</div>`;
+    }
+  });
+});
 </script>
 
 </body>
