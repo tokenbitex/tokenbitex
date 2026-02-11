@@ -21,8 +21,7 @@ header p{color:#475569;margin-top:10px;font-size:1.1rem}
 header .btn{margin-top:15px}
 .hamburger{position:fixed;top:20px;left:20px;display:flex;flex-direction:column;cursor:pointer;z-index:1000;transition:0.3s}
 .hamburger div{width:28px;height:3px;background:#2563eb;margin:5px 0;transition:.4s}
-.hamburger.hide{opacity:0;pointer-events:none;} /* ✅ اضافه شد */
-
+.hamburger.hide{display:none} /* اضافه شد: برای مخفی کردن هنگام اسکرول */
 .nav-menu{
   position:fixed;top:0;left:-260px;width:260px;height:100%;
   background:#fff;box-shadow:2px 0 12px rgba(0,0,0,.1);
@@ -83,11 +82,136 @@ footer{text-align:center;padding:25px;font-size:14px;color:#64748b;border-top:1p
 </header>
 
 <main>
+<!-- About BITEX -->
+<section id="about">
+  <h2>About BITEX</h2>
+  <p><strong>BITEX (BIT)</strong> is a decentralized utility token built on the Polygon PoS network, designed to provide fast, secure, and low-cost transactions across blockchain-based applications. BITEX empowers the crypto community with DeFi integrations, payments, and innovative financial solutions.</p>
+  
+  <div class="about-grid">
+    <div class="about-box">
+      <h3>Project Overview</h3>
+      <p>Launched in 2026, BITEX is focused on building a transparent and scalable ecosystem for developers, investors, and traders. BITEX seeks to become a key asset in the Polygon ecosystem.</p>
+    </div>
+    <div class="about-box">
+      <h3>Vision & Mission</h3>
+      <ul>
+        <li><strong>Vision:</strong> To be a leading utility token enabling seamless blockchain transactions globally.</li>
+        <li><strong>Mission:</strong> Provide a reliable, secure, and community-driven platform for trading and DeFi access.</li>
+      </ul>
+    </div>
+    <div class="about-box">
+      <h3>Use Cases</h3>
+      <ul>
+        <li>Payment gateway for decentralized applications</li>
+        <li>DeFi protocol integration and staking</li>
+        <li>Liquidity provision and token swapping on Polygon</li>
+        <li>Community-driven governance and rewards</li>
+      </ul>
+    </div>
+    <div class="about-box">
+      <h3>Development Team</h3>
+      <p>BITEX is developed by experienced blockchain engineers and crypto specialists, committed to transparency, security, and sustainable growth.</p>
+    </div>
+    <div class="about-box">
+      <h3>Roadmap & Future Plans</h3>
+      <ul>
+        <li>Q1 2026: Launch on Polygon network, website deployment, initial liquidity provision</li>
+        <li>Q2 2026: Partnerships with DEXs, staking integration, community programs</li>
+        <li>Q3 2026: NFT & DeFi expansion, cross-chain integrations</li>
+        <li>Q4 2026: Advanced DeFi tools, governance implementation, global adoption</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-<!-- ✅ تمام سکشن‌های قبلی بدون هیچ تغییری اینجا هستند -->
-<!-- (همان کدی که خودت فرستادی، کامل و بدون حذف) -->
+<section id="features">
+<h2>Core Features</h2>
+<div class="grid">
+<div class="card">⚡ Fast Transactions</div>
+<div class="card">💸 Ultra Low Fees</div>
+<div class="card">🔐 Secure Smart Contract</div>
+<div class="card">🌍 Global Accessibility</div>
+<div class="card">🤝 Community Driven</div>
+<div class="card">🔗 DeFi Ready</div>
+</div>
+</section>
 
-</main>
+<section id="tokenomics">
+<h2>Tokenomics</h2>
+<div class="grid">
+<div class="card"><b>Name:</b> BITEX</div>
+<div class="card"><b>Symbol:</b> BIT</div>
+<div class="card"><b>Network:</b> Polygon PoS</div>
+<div class="card"><b>Standard:</b> ERC-20</div>
+</div>
+<br>
+<b>Contract Address:</b>
+<div class="token-box">
+<a href="https://polygonscan.com/token/0x4296dD83e49d01BB801172d8e938FafE6dcF86A0" target="_blank" rel="noopener noreferrer">
+0x4296dD83e49d01BB801172d8e938FafE6dcF86A0
+</a>
+</div>
+</section>
+
+<section id="liquidity">
+<h2>Liquidity Lock & Security</h2>
+<div class="about-grid">
+  <div class="about-box">
+    <h3>🔒 LP Token Locked</h3>
+    <p><strong>Token / Type:</strong> Wrapped Polygon Ecosystem Token / BITEX (LP)</p>
+    <p><strong>LP Contract:</strong><br>
+    <span class="token-box">0x4F788Df4498cA4ABbaeB9BC50237041718716AEd</span></p>
+    <p><strong>Amount Locked:</strong> 44,721.3595 LP</p>
+  </div>
+  <div class="about-box">
+    <h3>📅 Lock Details</h3>
+    <ul>
+      <li><strong>Network:</strong> Polygon (PoS)</li>
+      <li><strong>Lock Platform:</strong> PinkSale – PinkLock</li>
+      <li><strong>Lock Start:</strong> Feb 11, 2026</li>
+      <li><strong>Unlock Date:</strong> Nov 12, 2031 – 07:14 UTC</li>
+      <li><strong>Status:</strong> Locked ✅</li>
+    </ul>
+  </div>
+  <div class="about-box">
+    <h3>🔎 Proof of Lock</h3>
+    <p><a href="https://polygonscan.com/tx/0x598684a30809589235f22605a6c7dedbab2629a50af623509fc304372c885f35" target="_blank" class="btn" rel="noopener noreferrer">View Lock Transaction</a></p>
+    <br>
+    <p><a href="https://www.pinksale.finance/pinklock/polygon/0x4F788Df4498cA4ABbaeB9BC502370417694710633" target="_blank" class="btn" rel="noopener noreferrer">View on PinkLock</a></p>
+  </div>
+</div>
+<p style="margin-top:15px;color:#475569;font-size:0.95rem;">
+BITEX liquidity is locked for over 5 years to ensure long-term stability, investor trust, and rug-pull protection.
+</p>
+</section>
+
+<section id="team">
+<h2>Project Team</h2>
+<p>BITEX is developed by blockchain engineers and crypto specialists focused on security, transparency, and sustainable growth.</p>
+<a class="btn" href="https://www.linkedin.com/in/token-bitex-832a5b3a1" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
+</section>
+
+<section id="social">
+<h2>Social</h2>
+<div class="social-icons">
+<a href="https://github.com/tokenbitex/tokenbitex" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+<a href="https://t.me/TokenBitexOfficial" target="_blank" rel="noopener noreferrer"><i class="fab fa-telegram"></i></a>
+<a href="https://twitter.com/tokenbitex" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+<a href="https://medium.com/@tokenbitex" target="_blank" rel="noopener noreferrer"><i class="fab fa-medium"></i></a>
+<a href="https://www.linkedin.com/in/token-bitex-832a5b3a1" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+<a href="https://bitcointalk.org/index.php?topic=5570074.new#new" target="_blank" rel="noopener noreferrer"><i class="fab fa-bitcoin"></i></a>
+<a href="https://www.facebook.com/tokenbitex" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+<a href="https://discord.gg/35xnXKawk" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord"></i></a>
+<a href="https://www.instagram.com/tokenbitex/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<p>Email: <a href="mailto:contact@tokenbitex.org">contact@tokenbitex.org</a></p>
+<p>Website: <a href="https://tokenbitex.org">https://tokenbitex.org</a></p>
+<p>Telegram: <a href="https://t.me/TokenBitexOfficial">https://t.me/TokenBitexOfficial</a></p>
+</section>
 
 <footer>
 <p>© 2026 BITEX — All Rights Reserved</p>
@@ -101,13 +225,13 @@ const closeMenu = document.getElementById('closeMenu');
 hamburger.onclick = () => navMenu.style.left = '0';
 closeMenu.onclick = () => navMenu.style.left = '-260px';
 
-/* ✅ فقط این قسمت اضافه شده */
-window.addEventListener('scroll', function() {
-  if (window.scrollY > 50) {
-    hamburger.classList.add('hide');
-  } else {
-    hamburger.classList.remove('hide');
-  }
+/* ===== اضافه شد: مخفی کردن همبرگر هنگام اسکرول ===== */
+window.addEventListener('scroll', () => {
+    if(window.scrollY > 50){ // وقتی پایین صفحه رفت
+        hamburger.classList.add('hide');
+    } else {
+        hamburger.classList.remove('hide');
+    }
 });
 </script>
 
