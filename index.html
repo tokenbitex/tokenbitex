@@ -65,7 +65,7 @@ footer{text-align:center;padding:25px;font-size:14px;color:#64748b;border-top:1p
   <a href="#home">Home</a>
   <a href="#tokenomics">Tokenomics</a>
   <a href="#liquidity">Liquidity Lock</a>
-  <a href="#howtobuy">How to Buy</a>
+  <a href="howtobuy.html">How to Buy</a>
   <a href="#features">Features</a>
   <a href="#team">Team</a>
   <a href="#contact">Contact</a>
@@ -77,7 +77,7 @@ footer{text-align:center;padding:25px;font-size:14px;color:#64748b;border-top:1p
 <h1>BITEX <span>(BIT)</span></h1>
 <p>Next Generation Utility Token on Polygon Network</p>
 <br>
-<a class="btn" href="#howtobuy">Buy BITEX</a>
+<a class="btn" href="howtobuy.html">Buy BITEX</a>
 </header>
 
 <main>
@@ -163,7 +163,7 @@ footer{text-align:center;padding:25px;font-size:14px;color:#64748b;border-top:1p
     <h3>🔒 LP Token Locked</h3>
     <p><strong>Token / Type:</strong> Wrapped Polygon Ecosystem Token / BITEX (LP)</p>
     <p><strong>LP Contract:</strong><br>
-    <span class="token-box">0x4F788Df4498cA4ABbaeB9BC50237041718716AEd</span></p>
+    <span class="token-box">0x4F788Df4498cA4ABbaeB9BC50237041716AEd</span></p>
     <p><strong>Amount Locked:</strong> 44,721.3595 LP</p>
   </div>
   <div class="about-box">
@@ -180,28 +180,11 @@ footer{text-align:center;padding:25px;font-size:14px;color:#64748b;border-top:1p
     <h3>🔎 Proof of Lock</h3>
     <p><a href="https://polygonscan.com/tx/0x598684a30809589235f22605a6c7dedbab2629a50af623509fc304372c885f35" target="_blank" class="btn">View Lock Transaction</a></p>
     <br>
-    <p><a href="https://www.pinksale.finance/pinklock/polygon/0x4F788Df4498cA4ABbaeB9BC502370417694710633" target="_blank" class="btn">View on PinkLock</a></p>
+    <p><a href="https://www.pinksale.finance/pinklock/polygon/0x4F788Df4498cA4ABbaeB9BC50237041716AEd" target="_blank" class="btn">View on PinkLock</a></p>
   </div>
 </div>
 <p style="margin-top:15px;color:#475569;font-size:0.95rem;">
 BITEX liquidity is locked for over 5 years to ensure long-term stability, investor trust, and rug-pull protection.
-</p>
-</section>
-
-<!-- How to Buy -->
-<section id="howtobuy">
-<h2>How to Buy BITEX</h2>
-<div class="tabs">
-  <div class="tab active" data-dex="quickswap">QuickSwap</div>
-  <div class="tab" data-dex="uniswap">Uniswap</div>
-</div>
-<div id="dex-content">
-  <p><strong>QuickSwap:</strong> Swap MATIC for BITEX on <a href="https://quickswap.exchange/#/swap" target="_blank">QuickSwap</a>.</p>
-  <p>Contract Address:</p>
-  <div class="token-box">0x4296dD83e49d01BB801172d8e938FafE6dcF86A0</div>
-</div>
-<p style="margin-top:10px;color:#475569;font-size:0.95rem;">
-⚠️ Always verify the contract address before purchasing.
 </p>
 </section>
 
@@ -246,21 +229,6 @@ const navMenu = document.getElementById('navMenu');
 const closeMenu = document.getElementById('closeMenu');
 hamburger.onclick = () => navMenu.style.left = '0';
 closeMenu.onclick = () => navMenu.style.left = '-260px';
-
-const tabs = document.querySelectorAll('.tab');
-const dexContent = document.getElementById('dex-content');
-tabs.forEach(tab=>{
-  tab.addEventListener('click',()=>{
-    tabs.forEach(t=>t.classList.remove('active'));
-    tab.classList.add('active');
-    const dex = tab.dataset.dex;
-    if(dex==='quickswap'){
-      dexContent.innerHTML=`<p><strong>QuickSwap:</strong> Swap MATIC for BITEX on <a href="https://quickswap.exchange/#/swap" target="_blank">QuickSwap</a>.</p><p>Contract Address:</p><div class="token-box">0x4296dD83e49d01BB801172d8e938FafE6dcF86A0</div>`;
-    }else if(dex==='uniswap'){
-      dexContent.innerHTML=`<p><strong>Uniswap:</strong> Swap ETH for BITEX on <a href="https://app.uniswap.org/#/swap" target="_blank">Uniswap</a>.</p><p>Contract Address:</p><div class="token-box">0x4296dD83e49d01BB801172d8e938FafE6dcF86A0</div>`;
-    }
-  });
-});
 </script>
 
 </body>
