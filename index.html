@@ -65,8 +65,8 @@ footer{text-align:center;padding:25px;font-size:14px;color:#64748b;border-top:1p
   <a href="#home">Home</a>
   <a href="#tokenomics">Tokenomics</a>
   <a href="#liquidity">Liquidity Lock</a>
-  <!-- لینک How to Buy با باز شدن در تب جدید واقعی -->
-  <a href="https://tokenbitex.org/#howtobuy" onclick="window.open(this.href,'_blank'); return false;" rel="noopener noreferrer">How to Buy</a>
+  <!-- لینک جدید به صفحه how-to-buy -->
+  <a href="how-to-buy.html" target="_blank" rel="noopener noreferrer">How to Buy</a>
   <a href="#features">Features</a>
   <a href="#team">Team</a>
   <a href="#contact">Contact</a>
@@ -78,8 +78,8 @@ footer{text-align:center;padding:25px;font-size:14px;color:#64748b;border-top:1p
 <h1>BITEX <span>(BIT)</span></h1>
 <p>Next Generation Utility Token on Polygon Network</p>
 <br>
-<!-- دکمه Buy BITEX با باز شدن در تب جدید -->
-<a class="btn" href="https://tokenbitex.org/#howtobuy" onclick="window.open(this.href,'_blank'); return false;" rel="noopener noreferrer">Buy BITEX</a>
+<!-- دکمه Buy BITEX به صفحه جدید how-to-buy.html -->
+<a class="btn" href="how-to-buy.html" target="_blank" rel="noopener noreferrer">Buy BITEX</a>
 </header>
 
 <main>
@@ -190,22 +190,6 @@ BITEX liquidity is locked for over 5 years to ensure long-term stability, invest
 </p>
 </section>
 
-<!-- How to Buy -->
-<section id="howtobuy">
-<h2>How to Buy BITEX</h2>
-<div class="tabs">
-  <div class="tab active" data-dex="quickswap">QuickSwap</div>
-</div>
-<div id="dex-content">
-  <p><strong>QuickSwap:</strong> Swap MATIC for BITEX on <a href="https://quickswap.exchange/#/swap" target="_blank" rel="noopener noreferrer">QuickSwap</a>.</p>
-  <p>Contract Address:</p>
-  <div class="token-box">0x4296dD83e49d01BB801172d8e938FafE6dcF86A0</div>
-</div>
-<p style="margin-top:10px;color:#475569;font-size:0.95rem;">
-⚠️ Always verify the contract address before purchasing.
-</p>
-</section>
-
 <!-- Team -->
 <section id="team">
 <h2>Project Team</h2>
@@ -247,19 +231,6 @@ const navMenu = document.getElementById('navMenu');
 const closeMenu = document.getElementById('closeMenu');
 hamburger.onclick = () => navMenu.style.left = '0';
 closeMenu.onclick = () => navMenu.style.left = '-260px';
-
-const tabs = document.querySelectorAll('.tab');
-const dexContent = document.getElementById('dex-content');
-tabs.forEach(tab=>{
-  tab.addEventListener('click',()=>{
-    tabs.forEach(t=>t.classList.remove('active'));
-    tab.classList.add('active');
-    const dex = tab.dataset.dex;
-    if(dex==='quickswap'){
-      dexContent.innerHTML=`<p><strong>QuickSwap:</strong> Swap MATIC for BITEX on <a href="https://quickswap.exchange/#/swap" target="_blank" rel="noopener noreferrer">QuickSwap</a>.</p><p>Contract Address:</p><div class="token-box">0x4296dD83e49d01BB801172d8e938FafE6dcF86A0</div>`;
-    }
-  });
-});
 </script>
 
 </body>
