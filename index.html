@@ -10,31 +10,26 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Segoe UI,Arial,sans-serif;background:linear-gradient(180deg,#f8fafc,#ffffff);color:#0f172a;line-height:1.7}
-a{color:#2563eb;text-decoration:none}
-a:hover{color:#1d4ed8}
-
 .lang-switch{
-  position:fixed;top:20px;right:20px;z-index:2000;
+  position:fixed;
+  top:20px;
+  right:20px;
+  z-index:2000;
 }
 .lang-switch button{
-  padding:6px 10px;margin-left:5px;cursor:pointer;
-  border:1px solid #2563eb;background:#fff;border-radius:6px;font-weight:600;
+  padding:6px 10px;
+  margin-left:5px;
+  cursor:pointer;
+  border:1px solid #2563eb;
+  background:#fff;
+  border-radius:6px;
+  font-weight:600;
 }
-.lang-switch button:hover{background:#2563eb;color:#fff}
-
-header{padding:90px 20px;text-align:center;background:radial-gradient(circle at top,#e0f2fe,#ffffff);display:flex;flex-direction:column;align-items:center;position:relative}
-header h1{font-size:3.2rem;font-weight:800}
-header span{color:#2563eb}
-header p{color:#475569;margin-top:10px;font-size:1.1rem}
-.btn{display:inline-block;padding:12px 24px;background:#2563eb;color:#fff;border-radius:10px;font-weight:600}
-.btn:hover{background:#1d4ed8}
-
-main{max-width:1100px;margin:auto;padding:60px 20px}
-section{background:#fff;border:1px solid #e5e7eb;border-radius:18px;padding:30px;margin-bottom:40px;box-shadow:0 6px 15px rgba(0,0,0,.04)}
-h2{margin-bottom:15px;font-size:1.9rem}
-footer{text-align:center;padding:25px;font-size:14px;color:#64748b;border-top:1px solid #e5e7eb}
+.lang-switch button:hover{
+  background:#2563eb;
+  color:#fff;
+}
+.lang-fa{display:none;}
 </style>
 
 <script>
@@ -44,8 +39,11 @@ function setLanguage(lang){
 }
 
 function applyLanguage(lang){
-  document.querySelectorAll("[data-en]").forEach(el=>{
-    el.textContent = (lang === "fa") ? el.dataset.fa : el.dataset.en;
+  document.querySelectorAll(".lang-en").forEach(el=>{
+    el.style.display = (lang === "fa") ? "none" : "block";
+  });
+  document.querySelectorAll(".lang-fa").forEach(el=>{
+    el.style.display = (lang === "fa") ? "block" : "none";
   });
   document.documentElement.lang = lang;
 }
@@ -65,81 +63,113 @@ document.addEventListener("DOMContentLoaded", function(){
   <button onclick="setLanguage('fa')">FA</button>
 </div>
 
+<!-- ================= ENGLISH ================= -->
+<div class="lang-en">
+
 <header id="home">
 <h1>BITEX <span>(BIT)</span></h1>
-
-<p data-en="Next Generation Utility Token on Polygon Network"
-   data-fa="توکن کاربردی نسل جدید بر روی شبکه پالیگان">
-Next Generation Utility Token on Polygon Network
-</p>
-
-<br>
-
-<a class="btn" href="how-to-buy.html" target="_blank"
-   data-en="Buy BITEX"
-   data-fa="خرید بیتکس">
-Buy BITEX
-</a>
+<p>Next Generation Utility Token on Polygon Network</p>
+<a class="btn" href="how-to-buy.html" target="_blank">Buy BITEX</a>
 </header>
 
 <main>
 
 <section id="about">
-<h2 data-en="About BITEX" data-fa="درباره بیتکس">About BITEX</h2>
-
-<p data-en="BITEX (BIT) is a decentralized utility token built on the Polygon PoS network, designed for fast, secure, and low-cost transactions across blockchain applications."
-   data-fa="بیتکس (BIT) یک توکن کاربردی غیرمتمرکز بر بستر شبکه پالیگان است که برای تراکنش‌های سریع، امن و کم‌هزینه در اکوسیستم بلاکچین طراحی شده است.">
-BITEX (BIT) is a decentralized utility token.
-</p>
+<h2>About BITEX</h2>
+<p>BITEX (BIT) is a decentralized utility token built on the Polygon PoS network, designed to provide fast, secure, and low-cost transactions.</p>
 </section>
 
 <section id="features">
-<h2 data-en="Core Features" data-fa="ویژگی‌های اصلی">Core Features</h2>
-<div>
-<p>⚡ <span data-en="Fast Transactions" data-fa="تراکنش‌های سریع">Fast Transactions</span></p>
-<p>💸 <span data-en="Ultra Low Fees" data-fa="کارمزد بسیار پایین">Ultra Low Fees</span></p>
-<p>🔐 <span data-en="Secure Smart Contract" data-fa="قرارداد هوشمند امن">Secure Smart Contract</span></p>
-<p>🌍 <span data-en="Global Accessibility" data-fa="دسترسی جهانی">Global Accessibility</span></p>
-<p>🤝 <span data-en="Community Driven" data-fa="مبتنی بر جامعه">Community Driven</span></p>
-<p>🔗 <span data-en="DeFi Ready" data-fa="آماده برای دیفای">DeFi Ready</span></p>
-</div>
+<h2>Core Features</h2>
+<ul>
+<li>Fast Transactions</li>
+<li>Ultra Low Fees</li>
+<li>Secure Smart Contract</li>
+<li>Global Accessibility</li>
+<li>Community Driven</li>
+<li>DeFi Ready</li>
+</ul>
 </section>
 
 <section id="tokenomics">
-<h2 data-en="Tokenomics" data-fa="اطلاعات توکن">Tokenomics</h2>
-
-<p><b data-en="Name:" data-fa="نام:">Name:</b> BITEX</p>
-<p><b data-en="Symbol:" data-fa="نماد:">Symbol:</b> BIT</p>
-<p><b data-en="Network:" data-fa="شبکه:">Network:</b> Polygon PoS</p>
-<p><b data-en="Standard:" data-fa="استاندارد:">Standard:</b> ERC-20</p>
-
-<br>
-
-<p><b data-en="Contract Address:" data-fa="آدرس قرارداد:">Contract Address:</b></p>
-<div>
-<a href="https://polygonscan.com/token/0x4296dD83e49d01BB801172d8e938FafE6dcF86A0" target="_blank">
+<h2>Token Information</h2>
+<p><b>Name:</b> BITEX</p>
+<p><b>Symbol:</b> BIT</p>
+<p><b>Network:</b> Polygon PoS</p>
+<p><b>Standard:</b> ERC-20</p>
+<p><b>Contract Address:</b><br>
 0x4296dD83e49d01BB801172d8e938FafE6dcF86A0
-</a>
-</div>
+</p>
 </section>
 
 <section id="contact">
-<h2 data-en="Contact" data-fa="تماس با ما">Contact</h2>
-
-<p>Email: <a href="mailto:contact@tokenbitex.org">contact@tokenbitex.org</a></p>
-<p>Website: <a href="https://tokenbitex.org">tokenbitex.org</a></p>
-<p>Telegram: <a href="https://t.me/TokenBitexOfficial">TokenBitexOfficial</a></p>
-
+<h2>Contact</h2>
+<p>Email: contact@tokenbitex.org</p>
+<p>Website: tokenbitex.org</p>
+<p>Telegram: TokenBitexOfficial</p>
 </section>
 
 </main>
 
 <footer>
-<p data-en="© 2026 BITEX — All Rights Reserved"
-   data-fa="© 2026 بیتکس — تمامی حقوق محفوظ است">
-© 2026 BITEX — All Rights Reserved
-</p>
+<p>© 2026 BITEX — All Rights Reserved</p>
 </footer>
+
+</div>
+
+<!-- ================= PERSIAN ================= -->
+<div class="lang-fa">
+
+<header>
+<h1>بیتکس <span>(BIT)</span></h1>
+<p>توکن کاربردی نسل جدید بر روی شبکه پالیگان</p>
+<a class="btn" href="how-to-buy.html" target="_blank">خرید بیتکس</a>
+</header>
+
+<main>
+
+<section>
+<h2>درباره بیتکس</h2>
+<p>بیتکس (BIT) یک توکن کاربردی غیرمتمرکز بر بستر شبکه پالیگان است که برای تراکنش‌های سریع، امن و کم‌هزینه طراحی شده است.</p>
+</section>
+
+<section>
+<h2>ویژگی‌های اصلی</h2>
+<ul>
+<li>تراکنش‌های سریع</li>
+<li>کارمزد بسیار پایین</li>
+<li>قرارداد هوشمند امن</li>
+<li>دسترسی جهانی</li>
+<li>مبتنی بر جامعه</li>
+<li>آماده برای دیفای</li>
+</ul>
+</section>
+
+<section>
+<h2>اطلاعات توکن</h2>
+<p><b>نام:</b> بیتکس</p>
+<p><b>نماد:</b> BIT</p>
+<p><b>شبکه:</b> پالیگان</p>
+<p><b>استاندارد:</b> ERC-20</p>
+<p><b>آدرس قرارداد:</b><br>
+0x4296dD83e49d01BB801172d8e938FafE6dcF86A0
+</p>
+</section>
+
+<section>
+<h2>تماس با ما</h2>
+<p>ایمیل: contact@tokenbitex.org</p>
+<p>وب‌سایت: tokenbitex.org</p>
+<p>تلگرام: TokenBitexOfficial</p>
+</section>
+
+</main>
+
+<footer>
+<p>© 2026 بیتکس — تمامی حقوق محفوظ است</p>
+</footer>
+
+</div>
 
 </body>
 </html>
