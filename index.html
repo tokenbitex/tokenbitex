@@ -10,6 +10,11 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
 <style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Segoe UI,Arial,sans-serif;background:linear-gradient(180deg,#f8fafc,#ffffff);color:#0f172a;line-height:1.7}
+a{color:#2563eb;text-decoration:none}
+a:hover{color:#1d4ed8}
+
 .lang-switch{
   position:fixed;
   top:20px;
@@ -29,6 +34,7 @@
   background:#2563eb;
   color:#fff;
 }
+
 .lang-fa{display:none;}
 </style>
 
@@ -63,23 +69,38 @@ document.addEventListener("DOMContentLoaded", function(){
   <button onclick="setLanguage('fa')">FA</button>
 </div>
 
-<!-- ================= ENGLISH ================= -->
-<div class="lang-en">
-
 <header id="home">
+
+<div class="lang-en">
 <h1>BITEX <span>(BIT)</span></h1>
 <p>Next Generation Utility Token on Polygon Network</p>
 <a class="btn" href="how-to-buy.html" target="_blank">Buy BITEX</a>
+</div>
+
+<div class="lang-fa">
+<h1>بیتکس <span>(BIT)</span></h1>
+<p>توکن کاربردی نسل جدید بر روی شبکه پالیگان</p>
+<a class="btn" href="how-to-buy.html" target="_blank">خرید بیتکس</a>
+</div>
+
 </header>
 
 <main>
 
 <section id="about">
+<div class="lang-en">
 <h2>About BITEX</h2>
-<p>BITEX (BIT) is a decentralized utility token built on the Polygon PoS network, designed to provide fast, secure, and low-cost transactions.</p>
+<p>BITEX (BIT) is a decentralized utility token built on the Polygon PoS network, designed for fast, secure, and low-cost transactions.</p>
+</div>
+
+<div class="lang-fa">
+<h2>درباره بیتکس</h2>
+<p>بیتکس (BIT) یک توکن کاربردی غیرمتمرکز بر بستر شبکه پالیگان است که برای تراکنش‌های سریع، امن و کم‌هزینه طراحی شده است.</p>
+</div>
 </section>
 
 <section id="features">
+<div class="lang-en">
 <h2>Core Features</h2>
 <ul>
 <li>Fast Transactions</li>
@@ -89,51 +110,9 @@ document.addEventListener("DOMContentLoaded", function(){
 <li>Community Driven</li>
 <li>DeFi Ready</li>
 </ul>
-</section>
-
-<section id="tokenomics">
-<h2>Token Information</h2>
-<p><b>Name:</b> BITEX</p>
-<p><b>Symbol:</b> BIT</p>
-<p><b>Network:</b> Polygon PoS</p>
-<p><b>Standard:</b> ERC-20</p>
-<p><b>Contract Address:</b><br>
-0x4296dD83e49d01BB801172d8e938FafE6dcF86A0
-</p>
-</section>
-
-<section id="contact">
-<h2>Contact</h2>
-<p>Email: contact@tokenbitex.org</p>
-<p>Website: tokenbitex.org</p>
-<p>Telegram: TokenBitexOfficial</p>
-</section>
-
-</main>
-
-<footer>
-<p>© 2026 BITEX — All Rights Reserved</p>
-</footer>
-
 </div>
 
-<!-- ================= PERSIAN ================= -->
 <div class="lang-fa">
-
-<header>
-<h1>بیتکس <span>(BIT)</span></h1>
-<p>توکن کاربردی نسل جدید بر روی شبکه پالیگان</p>
-<a class="btn" href="how-to-buy.html" target="_blank">خرید بیتکس</a>
-</header>
-
-<main>
-
-<section>
-<h2>درباره بیتکس</h2>
-<p>بیتکس (BIT) یک توکن کاربردی غیرمتمرکز بر بستر شبکه پالیگان است که برای تراکنش‌های سریع، امن و کم‌هزینه طراحی شده است.</p>
-</section>
-
-<section>
 <h2>ویژگی‌های اصلی</h2>
 <ul>
 <li>تراکنش‌های سریع</li>
@@ -143,33 +122,57 @@ document.addEventListener("DOMContentLoaded", function(){
 <li>مبتنی بر جامعه</li>
 <li>آماده برای دیفای</li>
 </ul>
+</div>
 </section>
 
-<section>
+<section id="tokenomics">
+<div class="lang-en">
+<h2>Token Information</h2>
+<p><b>Name:</b> BITEX</p>
+<p><b>Symbol:</b> BIT</p>
+<p><b>Network:</b> Polygon PoS</p>
+<p><b>Standard:</b> ERC-20</p>
+<p><b>Contract Address:</b><br>
+0x4296dD83e49d01BB801172d8e938FafE6dcF86A0
+</p>
+</div>
+
+<div class="lang-fa">
 <h2>اطلاعات توکن</h2>
 <p><b>نام:</b> بیتکس</p>
 <p><b>نماد:</b> BIT</p>
-<p><b>شبکه:</b> پالیگان</p>
+<p><b>شبکه:</b> Polygon PoS</p>
 <p><b>استاندارد:</b> ERC-20</p>
 <p><b>آدرس قرارداد:</b><br>
 0x4296dD83e49d01BB801172d8e938FafE6dcF86A0
 </p>
+</div>
 </section>
 
-<section>
+<section id="contact">
+<div class="lang-en">
+<h2>Contact</h2>
+<p>Email: contact@tokenbitex.org</p>
+<p>Website: tokenbitex.org</p>
+</div>
+
+<div class="lang-fa">
 <h2>تماس با ما</h2>
 <p>ایمیل: contact@tokenbitex.org</p>
 <p>وب‌سایت: tokenbitex.org</p>
-<p>تلگرام: TokenBitexOfficial</p>
+</div>
 </section>
 
 </main>
 
 <footer>
-<p>© 2026 بیتکس — تمامی حقوق محفوظ است</p>
-</footer>
-
+<div class="lang-en">
+<p>© 2026 BITEX — All Rights Reserved</p>
 </div>
+<div class="lang-fa">
+<p>© 2026 بیتکس — تمامی حقوق محفوظ است</p>
+</div>
+</footer>
 
 </body>
 </html>
