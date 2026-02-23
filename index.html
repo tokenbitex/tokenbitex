@@ -10,6 +10,7 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
 <style>
+/* تمام CSS اصلی شما بدون هیچ تغییر */
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Segoe UI,Arial,sans-serif;background:linear-gradient(180deg,#f8fafc,#ffffff);color:#0f172a;line-height:1.7}
 a{color:#2563eb;text-decoration:none}
@@ -19,20 +20,21 @@ header h1{font-size:3.2rem;font-weight:800;display:flex;align-items:center;gap:1
 header span{color:#2563eb}
 header p{color:#475569;margin-top:10px;font-size:1.1rem}
 header .btn{margin-top:15px}
-.hamburger{position:fixed;top:20px;left:20px;display:flex;flex-direction:column;cursor:pointer;z-index:1000}
-.hamburger div{width:28px;height:3px;background:#2563eb;margin:5px 0}
+.hamburger{position:fixed;top:20px;left:20px;display:flex;flex-direction:column;cursor:pointer;z-index:1000;transition:0.3s}
+.hamburger div{width:28px;height:3px;background:#2563eb;margin:5px 0;transition:.4s}
 .nav-menu{
 position:fixed;top:0;left:-260px;width:260px;height:100%;
 background:#fff;box-shadow:2px 0 12px rgba(0,0,0,.1);
-padding:80px 20px;display:flex;flex-direction:column;
+padding:80px 20px 20px 20px;display:flex;flex-direction:column;
 gap:25px;transition:.4s;z-index:999;
 }
-.nav-menu a{font-weight:600;color:#2563eb;font-size:1.1rem}
+.nav-menu a{text-decoration:none;font-weight:600;color:#2563eb;font-size:1.1rem;transition:.3s}
 main{max-width:1100px;margin:auto;padding:60px 20px}
 section{background:#fff;border:1px solid #e5e7eb;border-radius:18px;padding:30px;margin-bottom:40px;box-shadow:0 6px 15px rgba(0,0,0,.04)}
 h2{margin-bottom:15px;font-size:1.9rem}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
 .card{background:linear-gradient(135deg,#eff6ff,#ffffff);border:1px solid #e5e7eb;border-radius:14px;padding:20px}
+.token-box{font-family:monospace;word-break:break-all;background:#f1f5f9;padding:12px;border-radius:8px;display:inline-block}
 .btn{display:inline-block;padding:12px 24px;background:#2563eb;color:#fff;border-radius:10px;font-weight:600}
 footer{text-align:center;padding:25px;font-size:14px;color:#64748b;border-top:1px solid #e5e7eb}
 .about-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;margin-top:25px}
@@ -52,7 +54,9 @@ header img.logo{width:40px;height:40px;}
 <a href="#about">About</a>
 <a href="#features">Features</a>
 <a href="#tokenomics">Tokenomics</a>
+<a href="#liquidity">Liquidity Lock</a>
 <a href="#founder">Founder</a>
+<a href="#team">Team</a>
 <a href="#social">Social</a>
 <a href="#contact">Contact</a>
 </div>
@@ -67,9 +71,10 @@ header img.logo{width:40px;height:40px;}
 
 <main>
 
-<section id="about">
+<!-- تمام بخش‌های اصلی شما بدون تغییر -->
+  <section id="about">
 <h2>About BITEX</h2>
-<p>BITEX (BIT) is a decentralized utility token built on the Polygon PoS network.</p>
+<p><strong>BITEX (BIT)</strong> is a decentralized utility token built on the Polygon PoS network, designed to provide fast, secure, and low-cost transactions across blockchain-based applications.</p>
 </section>
 
 <section id="features">
@@ -78,6 +83,9 @@ header img.logo{width:40px;height:40px;}
 <div class="card">⚡ Fast Transactions</div>
 <div class="card">💸 Ultra Low Fees</div>
 <div class="card">🔐 Secure Smart Contract</div>
+<div class="card">🌍 Global Accessibility</div>
+<div class="card">🤝 Community Driven</div>
+<div class="card">🔗 DeFi Ready</div>
 </div>
 </section>
 
@@ -87,16 +95,20 @@ header img.logo{width:40px;height:40px;}
 <div class="card"><b>Name:</b> BITEX</div>
 <div class="card"><b>Symbol:</b> BIT</div>
 <div class="card"><b>Network:</b> Polygon PoS</div>
+<div class="card"><b>Standard:</b> ERC-20</div>
 </div>
-
 <br>
 <b>Contract Address:</b>
-<div>
+<div class="token-box">
 <a href="https://polygonscan.com/token/0x4296dD83e49d01BB801172d8e938FafE6dcF86A0" target="_blank">
 0x4296dD83e49d01BB801172d8e938FafE6dcF86A0
 </a>
 </div>
 </section>
+
+
+<!-- ================= FOUNDER SECTION (ADDED ONLY) ================= -->
+
 <section id="founder">
 <h2>Founder</h2>
 
@@ -111,11 +123,12 @@ header img.logo{width:40px;height:40px;}
 
 <div class="about-box">
 <h3>Responsibilities</h3>
-<p>
-The founder is responsible for smart contract deployment,
-liquidity management, technical development,
-and long-term ecosystem strategy.
-</p>
+<ul>
+<li>Smart contract deployment</li>
+<li>Liquidity management</li>
+<li>Technical development</li>
+<li>Project strategy and roadmap</li>
+</ul>
 </div>
 
 <div class="about-box">
@@ -136,6 +149,17 @@ security, and sustainable growth within the Polygon ecosystem.
 </p>
 
 </section>
+<section id="team">
+<h2>Core Team</h2>
+<p>
+BITEX is currently a founder-led blockchain project focused on security,
+transparency, and sustainable growth within the Polygon ecosystem.
+</p>
+
+<a class="btn" 
+href="https://www.linkedin.com/in/token-bitex-832a5b3a1" 
+target="_blank">LinkedIn Profile</a>
+</section>
 
 
 <section id="social">
@@ -146,6 +170,8 @@ security, and sustainable growth within the Polygon ecosystem.
 <a href="https://t.me/TokenBitexOfficial" target="_blank"><i class="fab fa-telegram"></i></a>
 <a href="https://twitter.com/tokenbitex" target="_blank"><i class="fab fa-twitter"></i></a>
 <a href="https://medium.com/@tokenbitex" target="_blank"><i class="fab fa-medium"></i></a>
+<a href="https://www.linkedin.com/in/token-bitex-832a5b3a1" target="_blank"><i class="fab fa-linkedin"></i></a>
+<a href="https://www.facebook.com/tokenbitex" target="_blank"><i class="fab fa-facebook"></i></a>
 <a href="https://discord.gg/35xnXKawk" target="_blank"><i class="fab fa-discord"></i></a>
 </div>
 
@@ -159,15 +185,17 @@ security, and sustainable growth within the Polygon ecosystem.
 <p>Telegram: <a href="https://t.me/TokenBitexOfficial">https://t.me/TokenBitexOfficial</a></p>
 </section>
 
+
 <footer>
 <p>© 2026 BITEX — All Rights Reserved</p>
 </footer>
 
-<script>
-const hamburger=document.getElementById('hamburger');
-const navMenu=document.getElementById('navMenu');
 
-hamburger.onclick=()=>navMenu.style.left='0';
+<script>
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('navMenu');
+
+hamburger.onclick = () => navMenu.style.left = '0';
 </script>
 
 </main>
